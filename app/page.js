@@ -1,7 +1,6 @@
 // pages/index.js
 // COSMIC RAG - Main Landing Page
 // Copy this to your Next.js project
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -11,7 +10,6 @@ export default function Home() {
   const [projects, setProjects] = useState([]);
   const [technologies, setTechnologies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [interactiveMode, setInteractiveMode] = useState(false); // Classic by default
 
   useEffect(() => {
     // Load all data
@@ -21,11 +19,11 @@ export default function Home() {
       fetch('/data/technologies.json').then(r => r.json())
     ]).then(([meta, proj, tech]) => {
       setMetadata(meta);
-      setProjects(proj.projects || proj); // Extract projects array
-      setTechnologies(tech.technologies || tech); // Extract technologies array
+      setProjects(proj.projects || proj);
+      setTechnologies(tech.technologies || tech);
       setLoading(false);
     }).catch(err => {
-      console.error('Error loading data:', err);
+      console.error("Error loading data:", err);
       setLoading(false);
     });
   }, []);
@@ -43,58 +41,30 @@ export default function Home() {
   const activeProjects = projects.filter(p => p.status === 'active').length;
   const top5Tech = technologies.slice(0, 5);
 
-  // Dynamic styles based on mode
-  const bgClass = interactiveMode
-    ? "bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900"
-    : "bg-gray-50";
-  const textClass = interactiveMode ? "text-white" : "text-gray-900";
-  const headerClass = interactiveMode
-    ? "bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
-    : "text-gray-900";
-  const subtextClass = interactiveMode ? "text-gray-300" : "text-gray-600";
-  const badgeClass = interactiveMode
-    ? "bg-white/10 backdrop-blur-md border-white/20"
-    : "bg-gray-200 border-gray-300";
-  const cardClass = interactiveMode
-    ? "bg-white/10 backdrop-blur-md border-white/20"
-    : "bg-white border-gray-300 shadow-sm";
-
   return (
-    <div className={`min-h-screen ${bgClass} ${textClass}`}>
+    
 
-        {/* Mode Toggle */}
-        <div className="fixed top-4 right-4 z-50">
-          <button
-            onClick={() => setInteractiveMode(!interactiveMode)}
-            className={`px-6 py-3 rounded-full font-semibold transition-all ${
-              interactiveMode
-                ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg hover:shadow-xl"
-                : "bg-white border-2 border-gray-300 text-gray-700 hover:border-gray-400"
-            }`}
-          >
-            {interactiveMode ? "🎨 Interactive Mode" : "📄 Classic Mode"}
-          </button>
-        </div>
+      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
 
         {/* Hero Section */}
         <header className="container mx-auto px-6 py-16 text-center">
-          <h1 className={`text-6xl font-bold mb-4 ${headerClass}`}>
+          <h1 className="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
             COSMIC RAG
           </h1>
-          <p className={`text-2xl ${subtextClass} mb-8`}>
+          <p className="text-2xl text-gray-300 mb-8">
             Cognitive Orchestration for Systematic Modeling and Intelligent Computing
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <span className={`px-6 py-2 ${badgeClass} rounded-full border`}>
+            <span className="px-6 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
               100% Local AI
             </span>
-            <span className={`px-6 py-2 ${badgeClass} rounded-full border`}>
+            <span className="px-6 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
               Privacy-First
             </span>
-            <span className={`px-6 py-2 ${badgeClass} rounded-full border`}>
+            <span className="px-6 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
               ARM64 Optimized
             </span>
-            <span className={`px-6 py-2 ${badgeClass} rounded-full border`}>
+            <span className="px-6 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
               €0 Cloud Costs
             </span>
           </div>
@@ -104,7 +74,7 @@ export default function Home() {
         <section className="container mx-auto px-6 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-            <div className={`${cardClass} rounded-2xl p-8 border`}>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <div className="text-5xl font-bold mb-2">{metadata.success_rate}%</div>
               <div className="text-gray-300">Extraction Success</div>
               <div className="text-sm text-gray-400 mt-2">
@@ -112,7 +82,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className={`${cardClass} rounded-2xl p-8 border`}>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <div className="text-5xl font-bold mb-2">{metadata.total_projects}</div>
               <div className="text-gray-300">Total Projects</div>
               <div className="text-sm text-gray-400 mt-2">
@@ -120,7 +90,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className={`${cardClass} rounded-2xl p-8 border`}>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <div className="text-5xl font-bold mb-2">{metadata.total_technologies}</div>
               <div className="text-gray-300">Technologies</div>
               <div className="text-sm text-gray-400 mt-2">
@@ -128,7 +98,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className={`${cardClass} rounded-2xl p-8 border`}>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <div className="text-5xl font-bold mb-2">€0</div>
               <div className="text-gray-300">Cloud Costs</div>
               <div className="text-sm text-gray-400 mt-2">
@@ -178,6 +148,15 @@ export default function Home() {
               ))
             }
           </div>
+
+          <div className="text-center mt-8">
+            <a
+              href="/projects"
+              className="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold hover:shadow-lg transition"
+            >
+              View All {metadata.total_projects} Projects →
+            </a>
+          </div>
         </section>
 
         {/* Technology Stack */}
@@ -199,6 +178,15 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <a
+              href="/technologies"
+              className="inline-block px-8 py-3 bg-white/10 backdrop-blur-md rounded-full font-semibold border border-white/20 hover:bg-white/15 transition"
+            >
+              Explore Full Stack ({metadata.total_technologies} technologies) →
+            </a>
           </div>
         </section>
 
@@ -242,6 +230,20 @@ export default function Home() {
             <p className="text-xl text-purple-100 mb-8">
               Dive into {metadata.total_projects} projects and {metadata.total_technologies} technologies
             </p>
+            <div className="flex justify-center gap-4 flex-wrap">
+              <a
+                href="/analytics"
+                className="px-8 py-4 bg-white text-purple-600 rounded-full font-bold hover:shadow-xl transition"
+              >
+                View Analytics Dashboard
+              </a>
+              <a
+                href="/projects"
+                className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/30 rounded-full font-bold hover:bg-white/20 transition"
+              >
+                Browse Projects
+              </a>
+            </div>
           </div>
         </section>
 
@@ -257,5 +259,6 @@ export default function Home() {
         </footer>
 
       </div>
+    </>
   );
 }
