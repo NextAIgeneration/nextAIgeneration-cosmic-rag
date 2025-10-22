@@ -799,6 +799,68 @@ cd orbstack
           </div>
         </section>
 
+        {/* Documentation */}
+        <section style={{
+          background: 'rgba(255, 255, 255, 0.05)',
+          padding: '40px',
+          margin: '30px 0',
+          borderRadius: '15px',
+          border: '1px solid rgba(224, 53, 162, 0.15)',
+          backdropFilter: 'blur(10px)'
+        }}>
+          <h2 style={{
+            color: '#E035A2',
+            fontSize: '2em',
+            marginBottom: '20px',
+            borderBottom: '2px solid rgba(224, 53, 162, 0.3)',
+            paddingBottom: '10px'
+          }}>
+            📚 Documentation
+          </h2>
+
+          <div style={{
+            background: 'rgba(255, 255, 255, 0.03)',
+            padding: '40px',
+            borderRadius: '12px',
+            border: '1px solid rgba(224, 53, 162, 0.2)',
+            textAlign: 'center'
+          }}>
+            <p style={{
+              fontSize: '1.1rem',
+              color: '#BD94BB',
+              marginBottom: '30px',
+              lineHeight: 1.6
+            }}>
+              Documentation complète, rapports de session, checklists sécurité,<br/>
+              analyses stratégiques et guides techniques disponibles.
+            </p>
+            <a
+              href="/docs"
+              style={{
+                display: 'inline-block',
+                background: 'linear-gradient(135deg, #E035A2 0%, #764ba2 100%)',
+                color: '#fff',
+                padding: '15px 40px',
+                borderRadius: '30px',
+                fontSize: '1.1rem',
+                fontWeight: 700,
+                textDecoration: 'none',
+                transition: 'all 0.3s',
+                boxShadow: '0 10px 30px rgba(224, 53, 162, 0.3)'
+              }}
+            >
+              📖 Accéder à la Documentation
+            </a>
+            <p style={{
+              marginTop: '25px',
+              fontSize: '0.85rem',
+              color: '#BD94BB'
+            }}>
+              9+ documents • Audits • Architecture • Sécurité • Rapports de session
+            </p>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer style={{
           textAlign: 'center',
