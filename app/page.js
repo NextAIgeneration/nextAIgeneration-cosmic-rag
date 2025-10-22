@@ -2,6 +2,8 @@
 // COSMIC RAG - Main Landing Page
 // Copy this to your Next.js project
 
+'use client';
+
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 
