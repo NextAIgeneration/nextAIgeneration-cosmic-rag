@@ -5,7 +5,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Head from 'next/head';
 
 export default function Home() {
   const [metadata, setMetadata] = useState(null);
@@ -41,14 +40,7 @@ export default function Home() {
   const top5Tech = technologies.slice(0, 5);
 
   return (
-    <>
-      <Head>
-        <title>COSMIC RAG - Cognitive Orchestration Platform</title>
-        <meta name="description" content="100% Local AI • Privacy-First • ARM64 Optimized" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
 
         {/* Hero Section */}
         <header className="container mx-auto px-6 py-16 text-center">
@@ -263,6 +255,5 @@ export default function Home() {
         </footer>
 
       </div>
-    </>
   );
 }
