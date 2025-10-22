@@ -20,8 +20,11 @@ export default function Home() {
       fetch('/data/technologies.json').then(r => r.json())
     ]).then(([meta, proj, tech]) => {
       setMetadata(meta);
-      setProjects(proj);
-      setTechnologies(tech);
+      setProjects(proj.projects || proj); // Extract projects array
+      setTechnologies(tech.technologies || tech); // Extract technologies array
+      setLoading(false);
+    }).catch(err => {
+      console.error('Error loading data:', err);
       setLoading(false);
     });
   }, []);
