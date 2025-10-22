@@ -237,6 +237,63 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Documentation */}
+        <section style={{ marginBottom: '80px' }}>
+          <h2 style={{
+            fontSize: '2rem',
+            fontWeight: 600,
+            color: '#fff',
+            marginBottom: '40px',
+            borderBottom: '2px solid #E035A2',
+            paddingBottom: '15px'
+          }}>
+            Documentation
+          </h2>
+
+          <div style={{
+            background: '#221E35',
+            padding: '40px',
+            borderRadius: '12px',
+            border: '1px solid rgba(224, 53, 162, 0.2)',
+            textAlign: 'center'
+          }}>
+            <p style={{
+              fontSize: '1.1rem',
+              color: '#BD94BB',
+              marginBottom: '30px',
+              lineHeight: 1.6
+            }}>
+              Complete technical documentation, session reports, security checklists,<br/>
+              and strategic analyses available.
+            </p>
+            <a
+              href="/docs"
+              style={{
+                display: 'inline-block',
+                background: '#E035A2',
+                color: '#fff',
+                padding: '15px 40px',
+                borderRadius: '8px',
+                fontSize: '1.1rem',
+                fontWeight: 600,
+                textDecoration: 'none',
+                transition: 'background 0.2s'
+              }}
+              onMouseOver={(e) => e.target.style.background = '#bd2d88'}
+              onMouseOut={(e) => e.target.style.background = '#E035A2'}
+            >
+              📚 View Documentation
+            </a>
+            <p style={{
+              marginTop: '25px',
+              fontSize: '0.85rem',
+              color: '#BD94BB'
+            }}>
+              9+ documents • Audits • Architecture • Security • Reports
+            </p>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer style={{
           textAlign: 'center',
