@@ -1,0 +1,14 @@
+{
+  "package": "C",
+  "run_id": 1,
+  "timestamp": "2025-10-22T16:10:40.077779",
+  "model": "llama3.1:8b",
+  "files_processed": 27,
+  "success_rate": 96.3,
+  "total_projects": 4,
+  "total_technologies": 15,
+  "extraction_cost": 0.0,
+  "infrastructure": "100% EU-sovereign (local AI)",
+  "security_scan": "PASSED",
+  "gdpr_compliance": "COMPLIANT"
+}

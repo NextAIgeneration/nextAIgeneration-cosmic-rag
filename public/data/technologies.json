@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "package": "C",
+    "version": "1.0.0",
+    "created": "2025-10-22T16:10:40.077779",
+    "description": "Technologies used in EU-pure projects",
+    "total_technologies": 15
+  },
+  "technologies": [
+    {
+      "name": "K3s",
+      "category": "container-orchestration",
+      "mentions": 16
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "database",
+      "mentions": 5
+    },
+    {
+      "name": "Prometheus",
+      "category": "monitoring",
+      "mentions": 5
+    },
+    {
+      "name": "Grafana",
+      "category": "monitoring",
+      "mentions": 4
+    },
+    {
+      "name": "GitHub",
+      "category": "version-control",
+      "mentions": 4
+    },
+    {
+      "name": "DuckDB",
+      "category": "database",
+      "mentions": 3
+    },
+    {
+      "name": "Ollama",
+      "category": "AI-inference",
+      "mentions": 2
+    },
+    {
+      "name": "Python",
+      "category": "programming-language",
+      "mentions": 2
+    },
+    {
+      "name": "Docker",
+      "category": "containerization",
+      "mentions": 1
+    },
+    {
+      "name": "FastAPI",
+      "category": "web-framework",
+      "mentions": 1
+    },
+    {
+      "name": "Vue.js",
+      "category": "frontend-framework",
+      "mentions": 1
+    },
+    {
+      "name": "GitLab",
+      "category": "version-control",
+      "mentions": 1
+    },
+    {
+      "name": "MinIO",
+      "category": "object-storage",
+      "mentions": 1
+    },
+    {
+      "name": "Qdrant",
+      "category": "vector-database",
+      "mentions": 1
+    },
+    {
+      "name": "Hugging Face",
+      "category": "AI-models",
+      "mentions": 1
+    }
+  ]
+}
