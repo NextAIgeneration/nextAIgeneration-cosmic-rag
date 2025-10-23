@@ -104,36 +104,7 @@ export default function AnalyseProjetsEU() {
     }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
-        body { margin: 0; padding: 0; overflow: hidden; }
-
-        #horizontal-container {
-          display: flex;
-          height: 100vh;
-          overflow-x: scroll;
-          overflow-y: hidden;
-          scroll-snap-type: x mandatory;
-          scroll-behavior: smooth;
-        }
-
-        #horizontal-container::-webkit-scrollbar {
-          display: none;
-        }
-
-        .slide {
-          min-width: 100vw;
-          height: 100vh;
-          scroll-snap-align: start;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 60px;
-          box-sizing: border-box;
-        }
-
-        .slide-content {
-          max-width: 1200px;
-          width: 100%;
-        }
+        body { margin: 0; padding: 0; overflow: hidden !important; }
       `}</style>
 
       {/* Navigation Indicators */}
@@ -234,11 +205,33 @@ export default function AnalyseProjetsEU() {
       )}
 
       {/* Horizontal Container */}
-      <div id="horizontal-container">
+      <div
+        id="horizontal-container"
+        style={{
+          display: 'flex',
+          height: '100vh',
+          overflowX: 'scroll',
+          overflowY: 'hidden',
+          scrollSnapType: 'x mandatory',
+          scrollBehavior: 'smooth',
+          msOverflowStyle: 'none',
+          scrollbarWidth: 'none',
+          WebkitOverflowScrolling: 'touch'
+        }}
+      >
 
         {/* Slide 1: Hero */}
-        <div className="slide">
-          <div className="slide-content">
+        <div style={{
+          minWidth: '100vw',
+          height: '100vh',
+          scrollSnapAlign: 'start',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '60px',
+          boxSizing: 'border-box'
+        }}>
+          <div style={{ maxWidth: '1200px', width: '100%' }}>
             <a href="/" style={{
               color: '#E035A2',
               fontSize: '1rem',
@@ -305,8 +298,17 @@ export default function AnalyseProjetsEU() {
         </div>
 
         {/* Slide 2: Pipeline */}
-        <div className="slide">
-          <div className="slide-content">
+        <div style={{
+          minWidth: '100vw',
+          height: '100vh',
+          scrollSnapAlign: 'start',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '60px',
+          boxSizing: 'border-box'
+        }}>
+          <div style={{ maxWidth: '1200px', width: '100%' }}>
             <h2 style={{
               color: '#E035A2',
               fontSize: '3em',
@@ -357,8 +359,18 @@ export default function AnalyseProjetsEU() {
         </div>
 
         {/* Slide 3: Projects Grid */}
-        <div className="slide" style={{ alignItems: 'flex-start', paddingTop: '80px' }}>
-          <div className="slide-content" style={{ maxHeight: 'calc(100vh - 160px)', overflowY: 'auto' }}>
+        <div style={{
+          minWidth: '100vw',
+          height: '100vh',
+          scrollSnapAlign: 'start',
+          display: 'flex',
+          alignItems: 'flex-start',
+          justifyContent: 'center',
+          padding: '60px',
+          paddingTop: '80px',
+          boxSizing: 'border-box'
+        }}>
+          <div style={{ maxWidth: '1200px', width: '100%', maxHeight: 'calc(100vh - 160px)', overflowY: 'auto' }}>
             <h2 style={{
               color: '#E035A2',
               fontSize: '3em',
@@ -462,8 +474,18 @@ export default function AnalyseProjetsEU() {
         </div>
 
         {/* Slide 4: Visualizations */}
-        <div className="slide" style={{ alignItems: 'flex-start', paddingTop: '80px' }}>
-          <div className="slide-content" style={{ maxHeight: 'calc(100vh - 160px)', overflowY: 'auto' }}>
+        <div style={{
+          minWidth: '100vw',
+          height: '100vh',
+          scrollSnapAlign: 'start',
+          display: 'flex',
+          alignItems: 'flex-start',
+          justifyContent: 'center',
+          padding: '60px',
+          paddingTop: '80px',
+          boxSizing: 'border-box'
+        }}>
+          <div style={{ maxWidth: '1200px', width: '100%', maxHeight: 'calc(100vh - 160px)', overflowY: 'auto' }}>
             <h2 style={{
               color: '#E035A2',
               fontSize: '3em',
@@ -511,8 +533,17 @@ export default function AnalyseProjetsEU() {
         </div>
 
         {/* Slide 5: Resources */}
-        <div className="slide">
-          <div className="slide-content" style={{ textAlign: 'center' }}>
+        <div style={{
+          minWidth: '100vw',
+          height: '100vh',
+          scrollSnapAlign: 'start',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '60px',
+          boxSizing: 'border-box'
+        }}>
+          <div style={{ maxWidth: '1200px', width: '100%', textAlign: 'center' }}>
             <h2 style={{
               color: '#E035A2',
               fontSize: '3em',
