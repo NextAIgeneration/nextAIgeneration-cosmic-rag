@@ -422,6 +422,58 @@ export default function AnalyseProjetsEU() {
           </div>
         </section>
 
+        {/* Visualisations */}
+        <section style={{
+          background: 'rgba(255, 255, 255, 0.05)',
+          padding: '40px',
+          borderRadius: '15px',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          backdropFilter: 'blur(10px)',
+          marginBottom: '40px'
+        }}>
+          <h2 style={{
+            color: '#E035A2',
+            fontSize: '2em',
+            marginBottom: '20px',
+            borderBottom: '2px solid rgba(224, 53, 162, 0.3)',
+            paddingBottom: '10px'
+          }}>
+            📊 Visualisations
+          </h2>
+
+          <div style={{ display: 'grid', gap: '30px', marginTop: '30px' }}>
+            <div>
+              <h3 style={{ color: '#BD94BB', marginBottom: '15px', fontSize: '1.2em' }}>Timeline Budget & Revenue</h3>
+              <img
+                src="/diagrams/chart-08-timeline-budget-revenue.png"
+                alt="Timeline Budget & Revenue"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: '12px',
+                  border: '2px solid rgba(224, 53, 162, 0.2)',
+                  boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)'
+                }}
+              />
+            </div>
+
+            <div>
+              <h3 style={{ color: '#BD94BB', marginBottom: '15px', fontSize: '1.2em' }}>Grants Application Scores</h3>
+              <img
+                src="/diagrams/chart-09-grants-scores.png"
+                alt="Grants Application Scores"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: '12px',
+                  border: '2px solid rgba(224, 53, 162, 0.2)',
+                  boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)'
+                }}
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer style={{
           textAlign: 'center',
