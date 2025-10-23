@@ -5,6 +5,9 @@ import { useState, useEffect } from 'react';
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [activeDiagram, setActiveDiagram] = useState('overview');
+  const [autoPlay, setAutoPlay] = useState(true);
+
+  const diagrams = ['overview', 'neural', 'symbolic', 'forecasting', 'orchestration'];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +17,28 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Carousel automatique
+  useEffect(() => {
+    if (!autoPlay) return;
+
+    const interval = setInterval(() => {
+      setActiveDiagram((current) => {
+        const currentIndex = diagrams.indexOf(current);
+        const nextIndex = (currentIndex + 1) % diagrams.length;
+        return diagrams[nextIndex];
+      });
+    }, 5000); // Change toutes les 5 secondes
+
+    return () => clearInterval(interval);
+  }, [autoPlay]);
+
+  const handleManualSelect = (diagramId) => {
+    setActiveDiagram(diagramId);
+    setAutoPlay(false);
+    // Reprendre l'autoplay après 10 secondes d'inactivité
+    setTimeout(() => setAutoPlay(true), 10000);
+  };
 
   return (
     <div style={{
@@ -389,7 +414,7 @@ export default function Home() {
             ].map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveDiagram(tab.id)}
+                onClick={() => handleManualSelect(tab.id)}
                 style={{
                   background: activeDiagram === tab.id
                     ? 'linear-gradient(135deg, #E035A2 0%, #bd2d88 100%)'

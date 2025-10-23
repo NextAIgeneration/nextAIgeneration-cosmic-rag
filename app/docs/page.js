@@ -2,15 +2,15 @@
 
 export default function DocsPage() {
   const docs = [
-    { title: "Audit nextAIgeneration & COSMIC", file: "00-AUDIT-NEXTAIGENERATION-COSMIC.md", size: "26KB" },
-    { title: "Session Complete 22 Oct 2025", file: "00-SESSION-COMPLETE-22-OCT-2025.md", size: "16KB" },
-    { title: "Security Pre-Release Checklist", file: "00-SECURITY-PRE-RELEASE-CHECKLIST.md", size: "10KB" },
-    { title: "MCP vs CLI Architecture", file: "00-MCP-VS-CLI-ARCHITECTURE.md", size: "15KB" },
-    { title: "Ready for nextAIgeneration", file: "00-READY-FOR-NEXTAIGENERATION.md", size: "9KB" },
-    { title: "Test Écosystème - Gaps Found", file: "00-TEST-ECOSYSTEME-GAPS-FOUND.md", size: "11KB" },
-    { title: "Secrets Management Architecture", file: "00-SECRETS-MANAGEMENT-ARCHITECTURE.md", size: "17KB" },
-    { title: "Packages Pushed GitLab", file: "00-PACKAGES-PUSHED-GITLAB.md", size: "7KB" },
-    { title: "COSMIC Strategic Content", file: "COSMIC-STRATEGIC-CONTENT-VERCEL.md", size: "14KB" }
+    { title: "Audit nextAIgeneration & COSMIC", file: "00-AUDIT-NEXTAIGENERATION-COSMIC.md", size: "26KB", slug: "audit-nextaigeneration" },
+    { title: "Session Complete 22 Oct 2025", file: "00-SESSION-COMPLETE-22-OCT-2025.md", size: "16KB", slug: "session-complete" },
+    { title: "Security Pre-Release Checklist", file: "00-SECURITY-PRE-RELEASE-CHECKLIST.md", size: "10KB", slug: "security-checklist" },
+    { title: "MCP vs CLI Architecture", file: "00-MCP-VS-CLI-ARCHITECTURE.md", size: "15KB", slug: "mcp-vs-cli" },
+    { title: "Ready for nextAIgeneration", file: "00-READY-FOR-NEXTAIGENERATION.md", size: "9KB", slug: "ready-nextaigeneration" },
+    { title: "Test Écosystème - Gaps Found", file: "00-TEST-ECOSYSTEME-GAPS-FOUND.md", size: "11KB", slug: "test-ecosysteme" },
+    { title: "Secrets Management Architecture", file: "00-SECRETS-MANAGEMENT-ARCHITECTURE.md", size: "17KB", slug: "secrets-management" },
+    { title: "Packages Pushed GitLab", file: "00-PACKAGES-PUSHED-GITLAB.md", size: "7KB", slug: "packages-gitlab" },
+    { title: "COSMIC Strategic Content", file: "COSMIC-STRATEGIC-CONTENT-VERCEL.md", size: "14KB", slug: "strategic-content" }
   ];
 
   return (
@@ -50,20 +50,37 @@ export default function DocsPage() {
         <section>
           <div style={{ display: 'grid', gap: '20px' }}>
             {docs.map((doc, idx) => (
-              <div key={idx} style={{
-                background: '#221E35',
-                padding: '25px 30px',
-                borderRadius: '12px',
-                border: '1px solid rgba(224, 53, 162, 0.2)',
-                transition: 'border-color 0.2s, transform 0.2s'
-              }}>
+              <a
+                key={idx}
+                href={`/docs/${doc.slug}`}
+                style={{
+                  background: '#221E35',
+                  padding: '25px 30px',
+                  borderRadius: '12px',
+                  border: '2px solid rgba(224, 53, 162, 0.2)',
+                  transition: 'all 0.3s ease',
+                  textDecoration: 'none',
+                  display: 'block',
+                  cursor: 'pointer'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.borderColor = 'rgba(224, 53, 162, 0.8)';
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(224, 53, 162, 0.3)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.borderColor = 'rgba(224, 53, 162, 0.2)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
                 <h3 style={{
                   fontSize: '1.3rem',
                   color: '#fff',
                   marginBottom: '10px',
                   fontWeight: 600
                 }}>
-                  {doc.title}
+                  📄 {doc.title}
                 </h3>
                 <div style={{
                   display: 'flex',
@@ -91,7 +108,15 @@ export default function DocsPage() {
                     {doc.size}
                   </span>
                 </div>
-              </div>
+                <div style={{
+                  marginTop: '15px',
+                  color: '#E035A2',
+                  fontSize: '0.9em',
+                  fontWeight: 600
+                }}>
+                  Lire le document →
+                </div>
+              </a>
             ))}
           </div>
 
