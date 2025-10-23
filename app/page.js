@@ -417,6 +417,125 @@ export default function Home() {
     └─────────────────┘`}</pre>
           </div>
 
+          {/* 4 Architecture Components - Clickable */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '25px',
+            marginTop: '40px',
+            marginBottom: '40px'
+          }}>
+            {[
+              {
+                title: 'Neural RAG',
+                icon: '🔍',
+                desc: 'DuckDB embeddings + semantic search',
+                slug: 'neural-rag',
+                tech: ['DuckDB', 'nomic-embed', 'Vector Search']
+              },
+              {
+                title: 'Symbolic Computing',
+                icon: '🧮',
+                desc: 'Wolfram Alpha precision calculations',
+                slug: 'symbolic-computing',
+                tech: ['Wolfram API', 'Factual validation', 'Math']
+              },
+              {
+                title: 'Time Series Forecasting',
+                icon: '📈',
+                desc: 'Prophet predictive analytics',
+                slug: 'forecasting',
+                tech: ['Prophet', 'Trend detection', 'Seasonality']
+              },
+              {
+                title: 'LLM Orchestration',
+                icon: '🤖',
+                desc: 'Claude/Ollama intelligent routing',
+                slug: 'llm-orchestration',
+                tech: ['Claude API', 'Ollama', 'Cost-aware']
+              }
+            ].map((component, idx) => (
+              <a
+                key={idx}
+                href={`/architecture/${component.slug}`}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.03)',
+                  padding: '25px',
+                  borderRadius: '12px',
+                  border: '2px solid rgba(255, 255, 255, 0.08)',
+                  transition: 'all 0.3s ease',
+                  textDecoration: 'none',
+                  display: 'block',
+                  cursor: 'pointer'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
+                  e.currentTarget.style.borderColor = 'rgba(224, 53, 162, 0.8)';
+                  e.currentTarget.style.boxShadow = '0 15px 35px rgba(224, 53, 162, 0.3)';
+                  e.currentTarget.style.background = 'rgba(224, 53, 162, 0.08)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
+                }}
+              >
+                <div style={{
+                  fontSize: '2.5em',
+                  marginBottom: '15px'
+                }}>
+                  {component.icon}
+                </div>
+                <h4 style={{
+                  color: '#E035A2',
+                  fontSize: '1.2em',
+                  marginBottom: '12px',
+                  fontWeight: 600
+                }}>
+                  {component.title}
+                </h4>
+                <p style={{
+                  color: '#c0c0c0',
+                  fontSize: '0.95em',
+                  lineHeight: 1.6,
+                  marginBottom: '15px'
+                }}>
+                  {component.desc}
+                </p>
+                <div style={{
+                  display: 'flex',
+                  gap: '8px',
+                  flexWrap: 'wrap'
+                }}>
+                  {component.tech.map((tech, techIdx) => (
+                    <span key={techIdx} style={{
+                      background: 'rgba(224, 53, 162, 0.15)',
+                      color: '#E035A2',
+                      padding: '4px 10px',
+                      borderRadius: '12px',
+                      fontSize: '0.75em',
+                      fontWeight: 600
+                    }}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div style={{
+                  color: '#E035A2',
+                  fontSize: '0.9em',
+                  fontWeight: 600,
+                  marginTop: '15px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px'
+                }}>
+                  Explorer le process →
+                </div>
+              </a>
+            ))}
+          </div>
+
           <h3 style={{
             color: '#BD94BB',
             fontSize: '1.3em',
