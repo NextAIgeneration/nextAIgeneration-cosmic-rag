@@ -1,11 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 export default function AnalyseProjetsEU() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = 5;
-
   const projects = [
     {
       id: 66,
@@ -69,168 +70,81 @@ export default function AnalyseProjetsEU() {
     }
   ];
 
-  const scrollToSlide = (index) => {
-    const container = document.getElementById('horizontal-container');
-    if (container) {
-      container.scrollTo({
-        left: index * window.innerWidth,
-        behavior: 'smooth'
-      });
-    }
-    setCurrentSlide(index);
-  };
-
-  useEffect(() => {
-    const container = document.getElementById('horizontal-container');
-    if (!container) return;
-
-    const handleScroll = () => {
-      const slideIndex = Math.round(container.scrollLeft / window.innerWidth);
-      setCurrentSlide(slideIndex);
-    };
-
-    container.addEventListener('scroll', handleScroll);
-    return () => container.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div style={{
       fontFamily: "'Poppins', sans-serif",
       height: '100vh',
       overflow: 'hidden',
       background: 'linear-gradient(135deg, #2d2749 0%, #1a1a2e 50%, #16213e 100%)',
-      color: '#e0e0e0',
-      position: 'relative'
+      color: '#e0e0e0'
     }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
-        body { margin: 0; padding: 0; overflow: hidden !important; }
+
+        .swiper {
+          width: 100%;
+          height: 100vh;
+        }
+
+        .swiper-slide {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 60px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: #E035A2 !important;
+          background: rgba(224, 53, 162, 0.2);
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          backdrop-filter: blur(10px);
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+          font-size: 20px;
+        }
+
+        .swiper-pagination-bullet {
+          background: rgba(255, 255, 255, 0.3);
+          width: 12px;
+          height: 12px;
+        }
+
+        .swiper-pagination-bullet-active {
+          background: #E035A2;
+          box-shadow: 0 0 15px rgba(224, 53, 162, 0.6);
+        }
+
+        .swiper-pagination {
+          right: 40px !important;
+          left: auto !important;
+          width: auto !important;
+          top: 50% !important;
+          transform: translateY(-50%);
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
       `}</style>
 
-      {/* Navigation Indicators */}
-      <div style={{
-        position: 'fixed',
-        right: '40px',
-        top: '50%',
-        transform: 'translateY(-50%)',
-        zIndex: 1000,
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '15px'
-      }}>
-        {[...Array(totalSlides)].map((_, index) => (
-          <button
-            key={index}
-            onClick={() => scrollToSlide(index)}
-            style={{
-              width: currentSlide === index ? '12px' : '8px',
-              height: currentSlide === index ? '12px' : '8px',
-              borderRadius: '50%',
-              background: currentSlide === index ? '#E035A2' : 'rgba(255, 255, 255, 0.3)',
-              border: 'none',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease',
-              boxShadow: currentSlide === index ? '0 0 15px rgba(224, 53, 162, 0.6)' : 'none'
-            }}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-
-      {/* Arrow Navigation */}
-      {currentSlide > 0 && (
-        <button
-          onClick={() => scrollToSlide(currentSlide - 1)}
-          style={{
-            position: 'fixed',
-            left: '40px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            zIndex: 1000,
-            background: 'rgba(224, 53, 162, 0.2)',
-            border: '2px solid rgba(224, 53, 162, 0.5)',
-            color: '#E035A2',
-            width: '50px',
-            height: '50px',
-            borderRadius: '50%',
-            fontSize: '24px',
-            cursor: 'pointer',
-            transition: 'all 0.3s ease',
-            backdropFilter: 'blur(10px)'
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.background = 'rgba(224, 53, 162, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.background = 'rgba(224, 53, 162, 0.2)';
-            e.currentTarget.style.transform = 'translateY(-50%)';
-          }}
-        >
-          ←
-        </button>
-      )}
-
-      {currentSlide < totalSlides - 1 && (
-        <button
-          onClick={() => scrollToSlide(currentSlide + 1)}
-          style={{
-            position: 'fixed',
-            right: '100px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            zIndex: 1000,
-            background: 'rgba(224, 53, 162, 0.2)',
-            border: '2px solid rgba(224, 53, 162, 0.5)',
-            color: '#E035A2',
-            width: '50px',
-            height: '50px',
-            borderRadius: '50%',
-            fontSize: '24px',
-            cursor: 'pointer',
-            transition: 'all 0.3s ease',
-            backdropFilter: 'blur(10px)'
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.background = 'rgba(224, 53, 162, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.background = 'rgba(224, 53, 162, 0.2)';
-            e.currentTarget.style.transform = 'translateY(-50%)';
-          }}
-        >
-          →
-        </button>
-      )}
-
-      {/* Horizontal Container */}
-      <div
-        id="horizontal-container"
-        style={{
-          display: 'flex',
-          height: '100vh',
-          overflowX: 'scroll',
-          overflowY: 'hidden',
-          scrollSnapType: 'x mandatory',
-          scrollBehavior: 'smooth',
-          msOverflowStyle: 'none',
-          scrollbarWidth: 'none',
-          WebkitOverflowScrolling: 'touch'
+      <Swiper
+        direction="horizontal"
+        slidesPerView={1}
+        spaceBetween={0}
+        mousewheel={true}
+        keyboard={true}
+        pagination={{
+          clickable: true,
         }}
+        navigation={true}
+        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
       >
-
         {/* Slide 1: Hero */}
-        <div style={{
-          minWidth: '100vw',
-          height: '100vh',
-          scrollSnapAlign: 'start',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '60px',
-          boxSizing: 'border-box'
-        }}>
+        <SwiperSlide>
           <div style={{ maxWidth: '1200px', width: '100%' }}>
             <a href="/" style={{
               color: '#E035A2',
@@ -295,19 +209,10 @@ export default function AnalyseProjetsEU() {
               </div>
             </div>
           </div>
-        </div>
+        </SwiperSlide>
 
         {/* Slide 2: Pipeline */}
-        <div style={{
-          minWidth: '100vw',
-          height: '100vh',
-          scrollSnapAlign: 'start',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '60px',
-          boxSizing: 'border-box'
-        }}>
+        <SwiperSlide>
           <div style={{ maxWidth: '1200px', width: '100%' }}>
             <h2 style={{
               color: '#E035A2',
@@ -356,21 +261,11 @@ export default function AnalyseProjetsEU() {
         └────────────────────────┘`}</pre>
             </div>
           </div>
-        </div>
+        </SwiperSlide>
 
-        {/* Slide 3: Projects Grid */}
-        <div style={{
-          minWidth: '100vw',
-          height: '100vh',
-          scrollSnapAlign: 'start',
-          display: 'flex',
-          alignItems: 'flex-start',
-          justifyContent: 'center',
-          padding: '60px',
-          paddingTop: '80px',
-          boxSizing: 'border-box'
-        }}>
-          <div style={{ maxWidth: '1200px', width: '100%', maxHeight: 'calc(100vh - 160px)', overflowY: 'auto' }}>
+        {/* Slide 3: Projects */}
+        <SwiperSlide>
+          <div style={{ maxWidth: '1200px', width: '100%', maxHeight: '80vh', overflowY: 'auto' }}>
             <h2 style={{
               color: '#E035A2',
               fontSize: '3em',
@@ -393,18 +288,7 @@ export default function AnalyseProjetsEU() {
                     padding: '30px',
                     borderRadius: '15px',
                     border: '2px solid rgba(255, 255, 255, 0.1)',
-                    backdropFilter: 'blur(10px)',
-                    transition: 'all 0.3s ease'
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.borderColor = 'rgba(224, 53, 162, 0.6)';
-                    e.currentTarget.style.transform = 'translateY(-5px)';
-                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(224, 53, 162, 0.3)';
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = 'none';
+                    backdropFilter: 'blur(10px)'
                   }}
                 >
                   <div style={{
@@ -471,21 +355,11 @@ export default function AnalyseProjetsEU() {
               ))}
             </div>
           </div>
-        </div>
+        </SwiperSlide>
 
         {/* Slide 4: Visualizations */}
-        <div style={{
-          minWidth: '100vw',
-          height: '100vh',
-          scrollSnapAlign: 'start',
-          display: 'flex',
-          alignItems: 'flex-start',
-          justifyContent: 'center',
-          padding: '60px',
-          paddingTop: '80px',
-          boxSizing: 'border-box'
-        }}>
-          <div style={{ maxWidth: '1200px', width: '100%', maxHeight: 'calc(100vh - 160px)', overflowY: 'auto' }}>
+        <SwiperSlide>
+          <div style={{ maxWidth: '1200px', width: '100%', maxHeight: '80vh', overflowY: 'auto' }}>
             <h2 style={{
               color: '#E035A2',
               fontSize: '3em',
@@ -530,19 +404,10 @@ export default function AnalyseProjetsEU() {
               </div>
             </div>
           </div>
-        </div>
+        </SwiperSlide>
 
-        {/* Slide 5: Resources */}
-        <div style={{
-          minWidth: '100vw',
-          height: '100vh',
-          scrollSnapAlign: 'start',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '60px',
-          boxSizing: 'border-box'
-        }}>
+        {/* Slide 5: Mission Accomplie */}
+        <SwiperSlide>
           <div style={{ maxWidth: '1200px', width: '100%', textAlign: 'center' }}>
             <h2 style={{
               color: '#E035A2',
@@ -588,25 +453,15 @@ export default function AnalyseProjetsEU() {
                   fontSize: '1.1em',
                   fontWeight: 700,
                   display: 'inline-block',
-                  transition: 'all 0.3s ease',
                   boxShadow: '0 5px 20px rgba(224, 53, 162, 0.4)'
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.transform = 'scale(1.05)';
-                  e.currentTarget.style.boxShadow = '0 8px 30px rgba(224, 53, 162, 0.6)';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.transform = 'scale(1)';
-                  e.currentTarget.style.boxShadow = '0 5px 20px rgba(224, 53, 162, 0.4)';
                 }}
               >
                 Retour à l'accueil
               </a>
             </div>
           </div>
-        </div>
-
-      </div>
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 }
