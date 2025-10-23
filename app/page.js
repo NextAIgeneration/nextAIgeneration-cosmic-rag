@@ -594,7 +594,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Use Cases */}
+        {/* Use Cases - Clickable */}
         <section className="animate-on-scroll" style={{
           background: 'rgba(255, 255, 255, 0.05)',
           padding: '40px',
@@ -622,54 +622,89 @@ export default function Home() {
             {[
               {
                 title: 'Analyse Projets EU',
-                desc: 'Extraction automatique de métriques (budget, timeline, livrables) depuis documents COSMIC HORIZON.'
+                desc: 'Extraction automatique de métriques (budget, timeline, livrables) depuis documents COSMIC HORIZON.',
+                slug: 'analyse-projets-eu',
+                icon: '📊'
               },
               {
                 title: 'Calculs Budgétaires',
-                desc: 'Validations factuelles via Wolfram Alpha pour budgets, pourcentages, ROI.'
+                desc: 'Validations factuelles via Wolfram Alpha pour budgets, pourcentages, ROI.',
+                slug: 'calculs-budgetaires',
+                icon: '💰'
               },
               {
                 title: 'Prédictions Energy',
-                desc: 'Forecasting consommation énergétique avec Prophet basé sur historiques.'
+                desc: 'Forecasting consommation énergétique avec Prophet basé sur historiques.',
+                slug: 'predictions-energy',
+                icon: '⚡'
               },
               {
                 title: 'Comparaisons Compétitives',
-                desc: 'Analyses TCO FFT vs Siemens/Schneider avec métriques quantifiées.'
+                desc: 'Analyses TCO FFT vs Siemens/Schneider avec métriques quantifiées.',
+                slug: 'comparaisons-competitives',
+                icon: '🔬'
               }
             ].map((useCase, idx) => (
-              <div
+              <a
                 key={idx}
+                href={`/use-cases/${useCase.slug}`}
                 style={{
                   background: 'rgba(255, 255, 255, 0.03)',
                   padding: '25px',
                   borderRadius: '12px',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                  transition: 'transform 0.3s, border-color 0.3s'
+                  border: '2px solid rgba(255, 255, 255, 0.08)',
+                  transition: 'all 0.3s ease',
+                  textDecoration: 'none',
+                  display: 'block',
+                  cursor: 'pointer',
+                  position: 'relative'
                 }}
                 onMouseOver={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.borderColor = 'rgba(224, 53, 162, 0.5)';
+                  e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
+                  e.currentTarget.style.borderColor = 'rgba(224, 53, 162, 0.8)';
+                  e.currentTarget.style.boxShadow = '0 15px 35px rgba(224, 53, 162, 0.3)';
+                  e.currentTarget.style.background = 'rgba(224, 53, 162, 0.08)';
                 }}
                 onMouseOut={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
                 }}
               >
+                <div style={{
+                  fontSize: '2.5em',
+                  marginBottom: '15px'
+                }}>
+                  {useCase.icon}
+                </div>
                 <h4 style={{
                   color: '#E035A2',
                   fontSize: '1.2em',
-                  marginBottom: '15px'
+                  marginBottom: '15px',
+                  fontWeight: 600
                 }}>
                   {useCase.title}
                 </h4>
                 <p style={{
                   color: '#c0c0c0',
                   fontSize: '1em',
-                  lineHeight: 1.6
+                  lineHeight: 1.6,
+                  marginBottom: '15px'
                 }}>
                   {useCase.desc}
                 </p>
-              </div>
+                <div style={{
+                  color: '#E035A2',
+                  fontSize: '0.9em',
+                  fontWeight: 600,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px'
+                }}>
+                  En savoir plus →
+                </div>
+              </a>
             ))}
           </div>
         </section>
