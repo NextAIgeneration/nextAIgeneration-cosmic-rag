@@ -356,56 +356,59 @@ export default function AnalyseProjetsEU() {
           </div>
         </SwiperSlide>
 
-        {/* Slide 4: Visualizations */}
+        {/* Slide 4: Visualisation 1 */}
         <SwiperSlide>
-          <div style={{ maxWidth: '1200px', width: '100%', maxHeight: '80vh', overflowY: 'auto' }}>
+          <div style={{ maxWidth: '1200px', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <h2 style={{
               color: '#E035A2',
-              fontSize: '3em',
-              marginBottom: '40px',
-              borderBottom: '3px solid rgba(224, 53, 162, 0.3)',
-              paddingBottom: '15px'
+              fontSize: '2.5em',
+              marginBottom: '30px',
+              textAlign: 'center'
             }}>
-              📊 Visualisations
+              📊 Timeline Budget & Revenue
             </h2>
-            <div style={{ display: 'grid', gap: '40px' }}>
-              <div>
-                <h3 style={{ color: '#BD94BB', marginBottom: '20px', fontSize: '1.3em' }}>
-                  Timeline Budget & Revenue
-                </h3>
-                <img
-                  src="/diagrams/chart-08-timeline-budget-revenue.png"
-                  alt="Timeline Budget & Revenue"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    borderRadius: '15px',
-                    border: '3px solid rgba(224, 53, 162, 0.3)',
-                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
-                  }}
-                />
-              </div>
-              <div>
-                <h3 style={{ color: '#BD94BB', marginBottom: '20px', fontSize: '1.3em' }}>
-                  Grants Application Scores
-                </h3>
-                <img
-                  src="/diagrams/chart-09-grants-scores.png"
-                  alt="Grants Application Scores"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    borderRadius: '15px',
-                    border: '3px solid rgba(224, 53, 162, 0.3)',
-                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
-                  }}
-                />
-              </div>
-            </div>
+            <img
+              src="/diagrams/chart-08-timeline-budget-revenue.png"
+              alt="Timeline Budget & Revenue"
+              style={{
+                width: '100%',
+                maxWidth: '900px',
+                height: 'auto',
+                borderRadius: '15px',
+                border: '3px solid rgba(224, 53, 162, 0.3)',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
+              }}
+            />
           </div>
         </SwiperSlide>
 
-        {/* Slide 5: Mission Accomplie */}
+        {/* Slide 5: Visualisation 2 */}
+        <SwiperSlide>
+          <div style={{ maxWidth: '1200px', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <h2 style={{
+              color: '#E035A2',
+              fontSize: '2.5em',
+              marginBottom: '30px',
+              textAlign: 'center'
+            }}>
+              📊 Grants Application Scores
+            </h2>
+            <img
+              src="/diagrams/chart-09-grants-scores.png"
+              alt="Grants Application Scores"
+              style={{
+                width: '100%',
+                maxWidth: '900px',
+                height: 'auto',
+                borderRadius: '15px',
+                border: '3px solid rgba(224, 53, 162, 0.3)',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
+              }}
+            />
+          </div>
+        </SwiperSlide>
+
+        {/* Slide 6: Mission Accomplie */}
         <SwiperSlide>
           <div style={{ maxWidth: '1200px', width: '100%', textAlign: 'center' }}>
             <h2 style={{

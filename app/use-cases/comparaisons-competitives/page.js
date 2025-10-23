@@ -376,34 +376,78 @@ export default function ComparaisonsCompetitives() {
           </div>
         </SwiperSlide>
 
-        {/* Slide 5: Visualisations */}
+        {/* Slide 5: Visualisation 1 */}
+        <SwiperSlide>
+          <div style={{ maxWidth: '1200px', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <h2 style={{
+              color: '#E035A2',
+              fontSize: '2.5em',
+              marginBottom: '30px',
+              textAlign: 'center'
+            }}>
+              📊 TCO Comparison: FFT vs Competitors
+            </h2>
+            <img
+              src="/diagrams/chart-06-cost-comparison.png"
+              alt="TCO Comparison FFT vs Competitors"
+              style={{
+                width: '100%',
+                maxWidth: '900px',
+                height: 'auto',
+                borderRadius: '15px',
+                border: '3px solid rgba(224, 53, 162, 0.3)',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
+              }}
+            />
+          </div>
+        </SwiperSlide>
+
+        {/* Slide 6: Visualisation 2 */}
+        <SwiperSlide>
+          <div style={{ maxWidth: '1200px', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <h2 style={{
+              color: '#E035A2',
+              fontSize: '2.5em',
+              marginBottom: '30px',
+              textAlign: 'center'
+            }}>
+              📊 Synergies & Cost Savings
+            </h2>
+            <img
+              src="/diagrams/chart-07-synergies-savings.png"
+              alt="Synergies and Cost Savings Analysis"
+              style={{
+                width: '100%',
+                maxWidth: '900px',
+                height: 'auto',
+                borderRadius: '15px',
+                border: '3px solid rgba(224, 53, 162, 0.3)',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
+              }}
+            />
+          </div>
+        </SwiperSlide>
+
+        {/* Slide 7: Visualisations 3 & 4 + Footer */}
         <SwiperSlide>
           <div style={{ width: '100%', maxWidth: '1200px' }}>
-            <section style={{
-              background: 'rgba(255, 255, 255, 0.05)',
-              padding: '40px',
-              borderRadius: '15px',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              backdropFilter: 'blur(10px)'
-            }}>
+            <div style={{ marginBottom: '40px' }}>
               <h2 style={{
                 color: '#E035A2',
                 fontSize: '2em',
-                marginBottom: '20px',
-                borderBottom: '2px solid rgba(224, 53, 162, 0.3)',
-                paddingBottom: '10px'
+                marginBottom: '30px',
+                textAlign: 'center'
               }}>
-                📊 Visualisations
+                📊 Benefits & ROI
               </h2>
-
-              <div style={{ display: 'grid', gap: '30px', marginTop: '30px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px' }}>
                 <div>
-                  <h3 style={{ color: '#BD94BB', marginBottom: '15px', fontSize: '1.2em' }}>
-                    TCO Comparison: FFT vs Siemens vs Schneider
+                  <h3 style={{ color: '#BD94BB', marginBottom: '15px', fontSize: '1.2em', textAlign: 'center' }}>
+                    Net Benefits Distribution
                   </h3>
                   <img
-                    src="/diagrams/chart-06-cost-comparison.png"
-                    alt="TCO Comparison FFT vs Competitors"
+                    src="/diagrams/chart-03-net-benefits-pie.png"
+                    alt="Net Benefits Distribution"
                     style={{
                       width: '100%',
                       height: 'auto',
@@ -413,14 +457,13 @@ export default function ComparaisonsCompetitives() {
                     }}
                   />
                 </div>
-
                 <div>
-                  <h3 style={{ color: '#BD94BB', marginBottom: '15px', fontSize: '1.2em' }}>
-                    Synergies & Cost Savings
+                  <h3 style={{ color: '#BD94BB', marginBottom: '15px', fontSize: '1.2em', textAlign: 'center' }}>
+                    ROI Multiplier Effect
                   </h3>
                   <img
-                    src="/diagrams/chart-07-synergies-savings.png"
-                    alt="Synergies and Cost Savings Analysis"
+                    src="/diagrams/chart-01-roi-multiplier.png"
+                    alt="ROI Multiplier Effect"
                     style={{
                       width: '100%',
                       height: 'auto',
@@ -429,61 +472,23 @@ export default function ComparaisonsCompetitives() {
                       boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)'
                     }}
                   />
-                </div>
-
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px' }}>
-                  <div>
-                    <h3 style={{ color: '#BD94BB', marginBottom: '15px', fontSize: '1.2em' }}>
-                      Net Benefits Distribution
-                    </h3>
-                    <img
-                      src="/diagrams/chart-03-net-benefits-pie.png"
-                      alt="Net Benefits Distribution"
-                      style={{
-                        width: '100%',
-                        height: 'auto',
-                        borderRadius: '12px',
-                        border: '2px solid rgba(224, 53, 162, 0.2)',
-                        boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)'
-                      }}
-                    />
-                  </div>
-
-                  <div>
-                    <h3 style={{ color: '#BD94BB', marginBottom: '15px', fontSize: '1.2em' }}>
-                      ROI Multiplier Effect
-                    </h3>
-                    <img
-                      src="/diagrams/chart-01-roi-multiplier.png"
-                      alt="ROI Multiplier Effect"
-                      style={{
-                        width: '100%',
-                        height: 'auto',
-                        borderRadius: '12px',
-                        border: '2px solid rgba(224, 53, 162, 0.2)',
-                        boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)'
-                      }}
-                    />
-                  </div>
                 </div>
               </div>
-
-              <footer style={{
-                textAlign: 'center',
-                padding: '40px 20px',
-                marginTop: '40px',
-                borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-                color: '#888'
-              }}>
-                <p style={{ marginBottom: '10px' }}>
-                  <a href="/" style={{ color: '#E035A2', textDecoration: 'none', marginRight: '20px' }}>Accueil</a>
-                  <a href="/docs" style={{ color: '#E035A2', textDecoration: 'none' }}>Documentation</a>
-                </p>
-                <p style={{ fontSize: '0.9em', color: '#BD94BB' }}>
-                  FFT Cognitive Platform • COSMIC RAG • 2025
-                </p>
-              </footer>
-            </section>
+            </div>
+            <footer style={{
+              textAlign: 'center',
+              padding: '20px',
+              borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+              color: '#888'
+            }}>
+              <p style={{ marginBottom: '10px' }}>
+                <a href="/" style={{ color: '#E035A2', textDecoration: 'none', marginRight: '20px' }}>Accueil</a>
+                <a href="/docs" style={{ color: '#E035A2', textDecoration: 'none' }}>Documentation</a>
+              </p>
+              <p style={{ fontSize: '0.9em', color: '#BD94BB' }}>
+                FFT Cognitive Platform • COSMIC RAG • 2025
+              </p>
+            </footer>
           </div>
         </SwiperSlide>
       </Swiper>

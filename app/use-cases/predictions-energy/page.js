@@ -273,95 +273,97 @@ export default function PredictionsEnergy() {
           </div>
         </SwiperSlide>
 
-        {/* Slide 4: Visualisations */}
+        {/* Slide 4: Visualisation 1 */}
+        <SwiperSlide>
+          <div style={{ maxWidth: '1200px', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <h2 style={{
+              color: '#E035A2',
+              fontSize: '2.5em',
+              marginBottom: '30px',
+              textAlign: 'center'
+            }}>
+              📊 Value Evolution Forecast
+            </h2>
+            <img
+              src="/diagrams/chart-02-value-evolution.png"
+              alt="Value Evolution Forecast"
+              style={{
+                width: '100%',
+                maxWidth: '900px',
+                height: 'auto',
+                borderRadius: '15px',
+                border: '3px solid rgba(224, 53, 162, 0.3)',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
+              }}
+            />
+          </div>
+        </SwiperSlide>
+
+        {/* Slide 5: Visualisation 2 */}
+        <SwiperSlide>
+          <div style={{ maxWidth: '1200px', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <h2 style={{
+              color: '#E035A2',
+              fontSize: '2.5em',
+              marginBottom: '30px',
+              textAlign: 'center'
+            }}>
+              📊 Environmental Impact Analysis
+            </h2>
+            <img
+              src="/diagrams/chart-04-environmental-impact.png"
+              alt="Environmental Impact Analysis"
+              style={{
+                width: '100%',
+                maxWidth: '900px',
+                height: 'auto',
+                borderRadius: '15px',
+                border: '3px solid rgba(224, 53, 162, 0.3)',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
+              }}
+            />
+          </div>
+        </SwiperSlide>
+
+        {/* Slide 6: Visualisation 3 + Footer */}
         <SwiperSlide>
           <div style={{ width: '100%', maxWidth: '1200px' }}>
-            <section style={{
-              background: 'rgba(255, 255, 255, 0.05)',
-              padding: '40px',
-              borderRadius: '15px',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              backdropFilter: 'blur(10px)'
-            }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginBottom: '40px' }}>
               <h2 style={{
                 color: '#E035A2',
-                fontSize: '2em',
-                marginBottom: '20px',
-                borderBottom: '2px solid rgba(224, 53, 162, 0.3)',
-                paddingBottom: '10px'
+                fontSize: '2.5em',
+                marginBottom: '30px',
+                textAlign: 'center'
               }}>
-                📊 Visualisations
+                📊 Deployment Timeline
               </h2>
-
-              <div style={{ display: 'grid', gap: '30px', marginTop: '30px' }}>
-                <div>
-                  <h3 style={{ color: '#BD94BB', marginBottom: '15px', fontSize: '1.2em' }}>
-                    Value Evolution Forecast
-                  </h3>
-                  <img
-                    src="/diagrams/chart-02-value-evolution.png"
-                    alt="Value Evolution Forecast"
-                    style={{
-                      width: '100%',
-                      height: 'auto',
-                      borderRadius: '12px',
-                      border: '2px solid rgba(224, 53, 162, 0.2)',
-                      boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)'
-                    }}
-                  />
-                </div>
-
-                <div>
-                  <h3 style={{ color: '#BD94BB', marginBottom: '15px', fontSize: '1.2em' }}>
-                    Environmental Impact Analysis
-                  </h3>
-                  <img
-                    src="/diagrams/chart-04-environmental-impact.png"
-                    alt="Environmental Impact Analysis"
-                    style={{
-                      width: '100%',
-                      height: 'auto',
-                      borderRadius: '12px',
-                      border: '2px solid rgba(224, 53, 162, 0.2)',
-                      boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)'
-                    }}
-                  />
-                </div>
-
-                <div>
-                  <h3 style={{ color: '#BD94BB', marginBottom: '15px', fontSize: '1.2em' }}>
-                    Deployment Timeline
-                  </h3>
-                  <img
-                    src="/diagrams/04-timeline.png"
-                    alt="Deployment Timeline"
-                    style={{
-                      width: '100%',
-                      height: 'auto',
-                      borderRadius: '12px',
-                      border: '2px solid rgba(224, 53, 162, 0.2)',
-                      boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)'
-                    }}
-                  />
-                </div>
-              </div>
-
-              <footer style={{
-                textAlign: 'center',
-                padding: '40px 20px',
-                marginTop: '40px',
-                borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-                color: '#888'
-              }}>
-                <p style={{ marginBottom: '10px' }}>
-                  <a href="/" style={{ color: '#E035A2', textDecoration: 'none', marginRight: '20px' }}>Accueil</a>
-                  <a href="/docs" style={{ color: '#E035A2', textDecoration: 'none' }}>Documentation</a>
-                </p>
-                <p style={{ fontSize: '0.9em', color: '#BD94BB' }}>
-                  FFT Cognitive Platform • COSMIC RAG • 2025
-                </p>
-              </footer>
-            </section>
+              <img
+                src="/diagrams/04-timeline.png"
+                alt="Deployment Timeline"
+                style={{
+                  width: '100%',
+                  maxWidth: '900px',
+                  height: 'auto',
+                  borderRadius: '15px',
+                  border: '3px solid rgba(224, 53, 162, 0.3)',
+                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
+                }}
+              />
+            </div>
+            <footer style={{
+              textAlign: 'center',
+              padding: '20px',
+              borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+              color: '#888'
+            }}>
+              <p style={{ marginBottom: '10px' }}>
+                <a href="/" style={{ color: '#E035A2', textDecoration: 'none', marginRight: '20px' }}>Accueil</a>
+                <a href="/docs" style={{ color: '#E035A2', textDecoration: 'none' }}>Documentation</a>
+              </p>
+              <p style={{ fontSize: '0.9em', color: '#BD94BB' }}>
+                FFT Cognitive Platform • COSMIC RAG • 2025
+              </p>
+            </footer>
           </div>
         </SwiperSlide>
       </Swiper>
