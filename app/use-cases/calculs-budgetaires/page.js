@@ -88,13 +88,12 @@ export default function CalculsBudgetaires() {
         }
 
         .swiper-pagination {
-          right: 40px !important;
-          left: auto !important;
+          bottom: 30px !important;
+          left: 50% !important;
+          transform: translateX(-50%);
           width: auto !important;
-          top: 50% !important;
-          transform: translateY(-50%);
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           gap: 10px;
         }
 
