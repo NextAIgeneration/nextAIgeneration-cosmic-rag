@@ -262,6 +262,16 @@ export default function Home() {
                 icon: '🤖',
                 title: 'LLM Orchestration',
                 desc: 'Routage intelligent Claude/Ollama selon complexité et coût pour optimisation budgétaire.'
+              },
+              {
+                icon: '🔌',
+                title: 'Ollama Bridge',
+                desc: 'Service sidecar FastAPI avec retry logic et circuit breaker pour résilience maximale.'
+              },
+              {
+                icon: '📊',
+                title: 'Monitoring',
+                desc: 'Stack complète Prometheus + Grafana + Alertmanager pour observabilité production.'
               }
             ].map((feature, idx) => (
               <div
@@ -664,7 +674,7 @@ export default function Home() {
             )}
           </div>
 
-          {/* 4 Architecture Components - Clickable */}
+          {/* 6 Architecture Components - Clickable */}
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -700,6 +710,20 @@ export default function Home() {
                 desc: 'Claude/Ollama intelligent routing',
                 slug: 'llm-orchestration',
                 tech: ['Claude API', 'Ollama', 'Cost-aware']
+              },
+              {
+                title: 'Ollama Bridge',
+                icon: '🔌',
+                desc: 'FastAPI sidecar service resilience',
+                slug: 'ollama-bridge',
+                tech: ['FastAPI', 'Retry logic', 'Circuit breaker']
+              },
+              {
+                title: 'Monitoring Stack',
+                icon: '📊',
+                desc: 'Production observability suite',
+                slug: 'monitoring',
+                tech: ['Prometheus', 'Grafana', 'Alertmanager']
               }
             ].map((component, idx) => (
               <a
