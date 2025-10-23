@@ -262,16 +262,6 @@ export default function Home() {
                 icon: '🤖',
                 title: 'LLM Orchestration',
                 desc: 'Routage intelligent Claude/Ollama selon complexité et coût pour optimisation budgétaire.'
-              },
-              {
-                icon: '🔌',
-                title: 'Ollama Bridge',
-                desc: 'Service sidecar FastAPI avec retry logic et circuit breaker pour résilience maximale.'
-              },
-              {
-                icon: '📊',
-                title: 'Monitoring',
-                desc: 'Stack complète Prometheus + Grafana + Alertmanager pour observabilité production.'
               }
             ].map((feature, idx) => (
               <div
