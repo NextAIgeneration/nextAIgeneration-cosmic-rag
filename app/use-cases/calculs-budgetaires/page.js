@@ -343,6 +343,62 @@ export default function CalculsBudgetaires() {
           </ul>
         </section>
 
+        {/* Visualisations */}
+        <section style={{
+          background: 'rgba(255, 255, 255, 0.05)',
+          padding: '40px',
+          borderRadius: '15px',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          backdropFilter: 'blur(10px)',
+          marginBottom: '40px'
+        }}>
+          <h2 style={{
+            color: '#E035A2',
+            fontSize: '2em',
+            marginBottom: '20px',
+            borderBottom: '2px solid rgba(224, 53, 162, 0.3)',
+            paddingBottom: '10px'
+          }}>
+            📊 Visualisations
+          </h2>
+
+          <div style={{ display: 'grid', gap: '30px', marginTop: '30px' }}>
+            <div>
+              <h3 style={{ color: '#BD94BB', marginBottom: '15px', fontSize: '1.2em' }}>
+                ROI Multiplier Effect
+              </h3>
+              <img
+                src="/diagrams/chart-01-roi-multiplier.png"
+                alt="ROI Multiplier Effect"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: '12px',
+                  border: '2px solid rgba(224, 53, 162, 0.2)',
+                  boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)'
+                }}
+              />
+            </div>
+
+            <div>
+              <h3 style={{ color: '#BD94BB', marginBottom: '15px', fontSize: '1.2em' }}>
+                Cost Comparison: FFT vs Competitors
+              </h3>
+              <img
+                src="/diagrams/chart-06-cost-comparison.png"
+                alt="Cost Comparison FFT vs Competitors"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: '12px',
+                  border: '2px solid rgba(224, 53, 162, 0.2)',
+                  boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)'
+                }}
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer style={{
           textAlign: 'center',
