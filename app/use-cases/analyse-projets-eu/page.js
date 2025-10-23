@@ -357,8 +357,8 @@ export default function AnalyseProjetsEU() {
         </div>
 
         {/* Slide 3: Projects Grid */}
-        <div className="slide" style={{ alignItems: 'flex-start', paddingTop: '100px', overflowY: 'auto' }}>
-          <div className="slide-content">
+        <div className="slide" style={{ alignItems: 'flex-start', paddingTop: '80px' }}>
+          <div className="slide-content" style={{ maxHeight: 'calc(100vh - 160px)', overflowY: 'auto' }}>
             <h2 style={{
               color: '#E035A2',
               fontSize: '3em',
@@ -462,8 +462,8 @@ export default function AnalyseProjetsEU() {
         </div>
 
         {/* Slide 4: Visualizations */}
-        <div className="slide" style={{ alignItems: 'flex-start', paddingTop: '100px', overflowY: 'auto' }}>
-          <div className="slide-content">
+        <div className="slide" style={{ alignItems: 'flex-start', paddingTop: '80px' }}>
+          <div className="slide-content" style={{ maxHeight: 'calc(100vh - 160px)', overflowY: 'auto' }}>
             <h2 style={{
               color: '#E035A2',
               fontSize: '3em',
