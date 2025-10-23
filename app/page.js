@@ -94,22 +94,22 @@ export default function Home() {
             display: 'inline-block',
             background: 'linear-gradient(135deg, #E035A2 0%, #bd2d88 100%)',
             color: '#fff',
-            padding: '20px 50px',
-            borderRadius: '50px',
-            fontSize: '1.3rem',
+            padding: '30px 70px',
+            borderRadius: '60px',
+            fontSize: '1.8rem',
             fontWeight: 700,
             textDecoration: 'none',
-            boxShadow: '0 15px 40px rgba(224, 53, 162, 0.4)',
+            boxShadow: '0 20px 50px rgba(224, 53, 162, 0.5)',
             transition: 'all 0.3s ease',
-            border: '2px solid rgba(255, 255, 255, 0.2)'
+            border: '3px solid rgba(255, 255, 255, 0.3)'
           }}
           onMouseOver={(e) => {
-            e.target.style.transform = 'scale(1.05)';
-            e.target.style.boxShadow = '0 20px 50px rgba(224, 53, 162, 0.6)';
+            e.target.style.transform = 'scale(1.08)';
+            e.target.style.boxShadow = '0 25px 60px rgba(224, 53, 162, 0.7)';
           }}
           onMouseOut={(e) => {
             e.target.style.transform = 'scale(1)';
-            e.target.style.boxShadow = '0 15px 40px rgba(224, 53, 162, 0.4)';
+            e.target.style.boxShadow = '0 20px 50px rgba(224, 53, 162, 0.5)';
           }}
         >
           📚 View Documentation
