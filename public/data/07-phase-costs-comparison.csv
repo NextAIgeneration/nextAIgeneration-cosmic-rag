@@ -1,0 +1,52 @@
+Phase,Catégorie,Item,Description,Coût (€),Temps (jours),Risque,Notes
+Phase 1 - Digital Twin,Développement,Matterport Scan,Scan 3D espace démo,0.00,0.5,Faible,Équipement déjà possédé
+Phase 1 - Digital Twin,Développement,Simulation Capteurs,Dev sensors virtuels + data mock,0.00,3.0,Faible,Développement interne
+Phase 1 - Digital Twin,Développement,Interface Vercel,Dashboard démo web,0.00,5.0,Faible,Vercel gratuit/existant
+Phase 1 - Digital Twin,Développement,Logique Contrôle,Algorithmes ΔT + scenarios,0.00,4.0,Faible,Code réutilisable Phase 2
+Phase 1 - Digital Twin,Design,Schémas D2,8 diagrammes techniques,0.00,2.0,Faible,Déjà réalisé
+Phase 1 - Digital Twin,Design,Pitch Deck,Présentation complète,0.00,2.0,Faible,Adobe Firefly + templates
+Phase 1 - Digital Twin,Infrastructure,Domaine + Hosting,fredfrenchtouch.io + Vercel,0.00,0.5,Faible,Déjà opérationnel
+Phase 1 - Digital Twin,Infrastructure,Cloudflare Edge,CDN + security,0.00,0.5,Faible,Plan gratuit suffisant
+Phase 1 - Digital Twin,Testing,Validation UX,Tests utilisateurs démo,0.00,2.0,Moyen,Feedback qualitatif
+Phase 1 - Digital Twin,Documentation,Guides techniques,Architecture docs,0.00,2.0,Faible,Markdown + diagrammes
+Phase 1 - Digital Twin,,SOUS-TOTAL PHASE 1,,0.00,21.5,MINIMAL,Investissement software only
+
+Phase 1 - Digital Twin,Temps Équipe,Développeur Full-Stack,3 semaines temps plein,0.00,21.0,Faible,Équipe interne
+Phase 1 - Digital Twin,Temps Équipe,Designer UX/UI,1 semaine,0.00,5.0,Faible,Équipe interne
+Phase 1 - Digital Twin,Temps Équipe,Chef de projet,Coordination,0.00,10.0,Faible,Temps partiel
+Phase 1 - Digital Twin,,TOTAL PHASE 1 (si valorisé),,0.00,36.0,ZÉRO RISQUE,"Si non sélectionné, zéro perte matérielle"
+
+Phase 2 - Production,Hardware,Installation complète type,"Hub + 3 sensors int + 1 ext + control (voir CSV hardware)","1,162.00",1.0,Moyen,Par installation
+Phase 2 - Production,Hardware,Boîtiers 3D,Impression sous-traitance lot 10,450.00,5.0,Faible,Sculpteo/Shapeways
+Phase 2 - Production,Hardware,Stock composants,Achat volume 10 installations,"10,500.00",0.0,Faible,Négociation fournisseurs
+Phase 2 - Production,Infrastructure,Gros Œuvre - Ventilation,Positionnement + grilles,350.00,2.0,Élevé,Par installation - variable
+Phase 2 - Production,Infrastructure,Gros Œuvre - Câblage,Routing cables + power,200.00,1.0,Moyen,Par installation
+Phase 2 - Production,Infrastructure,Gros Œuvre - Fixations,Supports muraux + montage,150.00,0.5,Faible,Par installation
+Phase 2 - Production,Services Cloud,Hetzner VM,Serveur production,15.00,0.0,Faible,Par mois (€15/mois)
+Phase 2 - Production,Services Cloud,OVH DNS,Configuration domaines,0.00,0.5,Faible,Déjà possédé
+Phase 2 - Production,Services Cloud,1Password Connect,Secrets management,8.00,0.5,Faible,Par mois (€8/mois)
+Phase 2 - Production,Services Cloud,Nextcloud Hetzner,Storage + collaboration,0.00,2.0,Moyen,Migration depuis config actuelle
+Phase 2 - Production,Développement,Passage Virtual → Prod,Adaptation code hardware réel,0.00,10.0,Moyen,Tests + calibration
+Phase 2 - Production,Développement,BelgBERT Training,Préparation modèle (Q1 2026),0.00,30.0,Élevé,Hardware dédié requis
+Phase 2 - Production,Testing,Tests réels on-site,Validation 3 installations pilotes,"3,500.00",15.0,Élevé,Ajustements + feedback
+Phase 2 - Production,Certification,Tests conformité EU,CE + RGPD validation,"1,200.00",10.0,Moyen,Obligatoire production
+Phase 2 - Production,Documentation,Manuels installation,Guides techniciens,0.00,5.0,Faible,Professionnalisation
+Phase 2 - Production,Formation,Training équipe install,Formation 5 techniciens,"2,500.00",3.0,Moyen,Compétences spécifiques
+Phase 2 - Production,,SOUS-TOTAL PHASE 2 (première install),,,"2,185.00",80.0,FINANCÉ,"Grant/Funding couvre investissement"
+
+Phase 2 - Production,Scaling,Installation 2-10,Réplication modèle,"11,000.00",40.0,Moyen,Économies échelle ~10%
+Phase 2 - Production,Scaling,Installation 11-50,Production série,"55,000.00",120.0,Faible,Économies échelle ~25%
+Phase 2 - Production,Scaling,Supply Chain,Partenariats fournisseurs,0.00,15.0,Moyen,Optimisation coûts
+Phase 2 - Production,,TOTAL PHASE 2 (scaling 50 units),,"68,185.00",255.0,MAÎTRISÉ,Financé par grants + revenus
+
+Comparaison,Avantage Phase 1,Coût matériel,Zéro hardware avant validation,0.00,,,ÉNORME AVANTAGE
+Comparaison,Avantage Phase 1,Flexibilité,Itérations rapides sans coût,0.00,,,Ajustements faciles
+Comparaison,Avantage Phase 1,Démonstration,Démo fonctionnelle immédiate,0.00,,,Convaincant pour pitch
+Comparaison,Avantage Phase 1,Réutilisation,Code → Phase 2 direct,0.00,,,Pas de perte temps
+Comparaison,Risque Phase 2,Sans financement,Investissement perdu si échec,"~20,000.00",,,RISQUE ÉLIMINÉ par Phase 1
+Comparaison,Bénéfice Approche,ROI sécurisé,Validation avant investissement,∞,,,Approche intelligente
+
+Financement,Digital Europe,Grant moyen attendu,"50,000.00 - 200,000.00",,,Moyen,Couvre Phase 2 complète
+Financement,Horizon Europe,Grant potentiel,"100,000.00 - 500,000.00",,,Élevé,Scaling + R&D BelgBERT
+Financement,Revenus Phase 2,SaaS subscription,100.00/mois par installation,,,Récurrent,Modèle économique viable
+Financement,Break-even,Nombre installations,12-15 installations,,,,"ROI 18-24 mois"

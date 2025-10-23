@@ -1,0 +1,61 @@
+Catégorie,Item,Description,Quantité,Prix Unitaire (€),Coût Matériel (€),Installation (€),Mise en Service (€),Total (€),Notes
+Central Hub,Orange Pi 3 LTS,Central gateway board 2GB RAM,1,65.00,65.00,0.00,15.00,80.00,Alternative: RPi 4 (80€)
+Central Hub,LoRa Module SX1278,868MHz EU LoRa transceiver,1,8.00,8.00,5.00,5.00,18.00,Connecté via SPI
+Central Hub,Antenne LoRa,868MHz antenna 3dBi,1,5.00,5.00,5.00,0.00,10.00,Externe boîtier
+Central Hub,Boîtier Hub,3D printed case + ventilation,1,15.00,15.00,5.00,0.00,20.00,Sous-traitance impression
+Central Hub,Carte microSD,64GB class 10,1,12.00,12.00,0.00,0.00,12.00,OS + storage local
+Central Hub,Alimentation USB-C,USB-C PD 5V 3A,1,10.00,10.00,0.00,0.00,10.00,Universelle
+,,Sous-total Hub Central,,,115.00,15.00,20.00,150.00,
+
+Sensor Node Internal,Raspberry Pi Zero 2 W,Compact SBC WiFi/BT,3,18.00,54.00,0.00,20.00,74.00,1 par pièce principale
+Sensor Node Internal,Capteur CO2 MH-Z19B,NDIR CO2 sensor 0-5000ppm,2,22.00,44.00,5.00,10.00,59.00,Salon + Cuisine
+Sensor Node Internal,Capteur BME280,Temp/Humidity/Pressure I2C,3,6.00,18.00,0.00,5.00,23.00,1 par node
+Sensor Node Internal,Capteur Mouvement PIR,Motion detection,1,3.00,3.00,5.00,0.00,8.00,Chambre only
+Sensor Node Internal,LoRa Module SX1278,868MHz pour mesh local,3,8.00,24.00,5.00,10.00,39.00,Communication hub
+Sensor Node Internal,Boîtiers sensor nodes,3D printed cases,3,10.00,30.00,5.00,0.00,35.00,Design custom
+Sensor Node Internal,Cartes microSD,32GB class 10,3,8.00,24.00,0.00,0.00,24.00,OS nodes
+Sensor Node Internal,Alimentations USB-C,5V 2A par node,3,8.00,24.00,10.00,0.00,34.00,Installation câblage
+,,Sous-total Sensor Nodes Int,,,221.00,30.00,45.00,296.00,
+
+Sensor Node External,Raspberry Pi Pico W,Microcontroller WiFi,1,7.00,7.00,0.00,10.00,17.00,Low power outdoor
+Sensor Node External,Capteur BME280,Temp/Humidity/Pressure ext,1,6.00,6.00,0.00,5.00,11.00,Weatherproof
+Sensor Node External,LoRa Module SX1278,868MHz communication,1,8.00,8.00,5.00,5.00,18.00,Longue portée
+Sensor Node External,Boîtier IP65,Weatherproof enclosure,1,18.00,18.00,15.00,0.00,33.00,Protection outdoor
+Sensor Node External,Batterie 18650,3.7V Li-ion rechargeable,2,5.00,10.00,5.00,0.00,15.00,Backup power
+Sensor Node External,Panneau solaire,5V mini solar panel,1,12.00,12.00,10.00,5.00,27.00,Charge batteries
+Sensor Node External,Contrôleur charge,Battery management,1,8.00,8.00,0.00,5.00,13.00,Protection batteries
+,,Sous-total Sensor Node Ext,,,69.00,35.00,30.00,134.00,
+
+Control Node,Raspberry Pi Zero 2 W,Control board,1,18.00,18.00,0.00,15.00,33.00,Ventilation control
+Control Node,Module Relais 4 canaux,Relay board 10A,1,9.00,9.00,10.00,10.00,29.00,Contrôle actuateurs
+Control Node,Capteur Luminosité BH1750,Lux sensor I2C,1,4.00,4.00,0.00,5.00,9.00,Day/night detection
+Control Node,LoRa Module SX1278,868MHz bidirectionnel,1,8.00,8.00,5.00,5.00,18.00,Commands from hub
+Control Node,Boîtier control,3D printed case relais,1,12.00,12.00,5.00,0.00,17.00,Sécurité électrique
+Control Node,Carte microSD,32GB class 10,1,8.00,8.00,0.00,0.00,8.00,OS control
+Control Node,Alimentation USB-C,5V 2.5A,1,8.00,8.00,0.00,0.00,8.00,Power control node
+Control Node,Câblage ventilation,Fils électriques + connecteurs,1,15.00,15.00,25.00,10.00,50.00,Installation électrique
+,,Sous-total Control Node,,,82.00,45.00,45.00,172.00,
+
+Connectivité Cloud,Abonnement The Things Network,LoRaWAN gratuit EU,1,0.00,0.00,0.00,10.00,10.00,Configuration gateway TTN
+Connectivité Cloud,Configuration IPFS,Node IPFS setup,1,0.00,0.00,0.00,20.00,20.00,Local + cloud gateway
+Connectivité Cloud,Domaine fredfrenchtouch.io,Déjà possédé,1,0.00,0.00,0.00,0.00,0.00,Existant
+Connectivité Cloud,Cloudflare,Plan gratuit,1,0.00,0.00,0.00,5.00,5.00,Edge computing
+,,Sous-total Connectivité,,,0.00,0.00,35.00,35.00,
+
+Installation Générale,Câblage général,Cables USB-C + ethernet,1,35.00,35.00,50.00,0.00,85.00,Routing installation
+Installation Générale,Fixations murales,Supports + vis + chevilles,1,20.00,20.00,30.00,0.00,50.00,Montage nodes
+Installation Générale,Documentation,User manual + maintenance,1,0.00,0.00,0.00,40.00,40.00,Guides utilisateur
+Installation Générale,Formation client,Training 2h on-site,1,0.00,0.00,0.00,120.00,120.00,Prise en main système
+Installation Générale,Support initial,Support 1 mois post-install,1,0.00,0.00,0.00,80.00,80.00,Helpdesk + ajustements
+,,Sous-total Installation,,,55.00,80.00,240.00,375.00,
+
+,,TOTAL INSTALLATION COMPLÈTE,,,542.00,205.00,415.00,"1,162.00",Prix pour 1 installation type (maison 3-4 pièces)
+
+Variations,Hub Premium (Orange Pi 5),Alternative plus puissante 8GB,1,110.00,110.00,0.00,15.00,125.00,+45€ vs Pi 3 LTS
+Variations,Node additionnel,Sensor node supplémentaire,1,75.00,75.00,10.00,15.00,100.00,Par pièce additionnelle
+Variations,Capteur Air Quality,PM2.5 + VOC sensor,1,35.00,35.00,5.00,10.00,50.00,Option qualité air avancée
+Variations,Gateway LoRa dédié,Gateway TTN autonome,1,85.00,85.00,20.00,30.00,135.00,Si multi-installations site
+
+Économies Échelle,Installation 5 unités,Discount volume,5,,,,,"-5,200.00",Économie ~10% par unité
+Économies Échelle,Installation 10 unités,Discount volume,10,,,,,"-11,000.00",Économie ~15% par unité
+Économies Échelle,Installation 50 unités,Discount volume + négociation,50,,,,,"-60,000.00",Économie ~25% par unité

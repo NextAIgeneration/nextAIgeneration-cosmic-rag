@@ -1,0 +1,217 @@
+direction: right
+
+title: COSMIC Project Phases - Digital Twin First Approach {
+  near: top-center
+  shape: text
+  style: {
+    font-size: 24
+    bold: true
+  }
+}
+
+# Phase 1: Virtual
+phase1: PHASE 1 - Digital Twin {
+  shape: rectangle
+  style.fill: "#E3F2FD"
+  style.stroke: "#1565C0"
+  style.stroke-width: 3
+
+  timeline: Timeline\nOct-Nov 2025 {
+    shape: rectangle
+    style.fill: "#90CAF9"
+    style.stroke: "#0D47A1"
+    style.stroke-width: 2
+  }
+
+  virtual: Virtual Components {
+    shape: rectangle
+    style.fill: "#BBDEFB"
+
+    matterport: 3D Virtual Space\n(Matterport scan)
+
+    sim_sensors: Simulated Sensors {
+      s1: Virtual CO2 readings
+      s2: Virtual temp sensors
+      s3: Simulated external weather
+    }
+
+    sim_control: Simulated Control {
+      c1: Virtual ventilation
+      c2: Logic algorithms
+      c3: ΔT calculations
+    }
+
+    interface: Demo Interface {
+      ui1: Web dashboard (Vercel)
+      ui2: Real-time visualization
+      ui3: Control panel mock
+    }
+  }
+
+  deliverables: Deliverables {
+    d1: ✓ Architecture complete
+    d2: ✓ Technical diagrams
+    d3: ✓ Logic validated
+    d4: ✓ Pitch deck
+    d5: ✓ Live demo
+  }
+
+  investment: Investment\nMINIMAL {
+    shape: hexagon
+    style.fill: "#81C784"
+    cost: Software only\nNo hardware cost
+  }
+}
+
+# Transition
+transition: Funding Secured {
+  shape: diamond
+  style.fill: "#FFF59D"
+  style.stroke: "#F57F17"
+  style.stroke-width: 3
+
+  decision: Digital Europe /\nHorizon Europe\nSelection
+}
+
+# Phase 2: Production
+phase2: PHASE 2 - Physical Deployment {
+  shape: rectangle
+  style.fill: "#C8E6C9"
+  style.stroke: "#2E7D32"
+  style.stroke-width: 3
+
+  timeline: Timeline\nQ1 2026+ {
+    shape: rectangle
+    style.fill: "#81C784"
+    style.stroke: "#1B5E20"
+    style.stroke-width: 2
+  }
+
+  hardware: Real Hardware {
+    shape: rectangle
+    style.fill: "#A5D6A7"
+
+    hub: Central Hub\nOrange Pi / RPi {
+      status: Physical device
+    }
+
+    sensors_int: Internal Sensor Nodes\n(3-5 per installation) {
+      hw: RPi Zero 2 W / Pico W
+      real: Real CO2, temp sensors
+    }
+
+    sensor_ext: External Sensor\nWeatherproof {
+      hw: RPi Pico W
+      real: Real outdoor temp/humidity
+    }
+
+    control: Control Node\nVentilation {
+      hw: RPi Zero 2 W + Relays
+      real: Real actuators
+    }
+  }
+
+  infrastructure: Infrastructure Work {
+    shape: rectangle
+    style.fill: "#A5D6A7"
+
+    civil: Gros Œuvre Adjustments {
+      a1: Ventilation positioning
+      a2: Air duct routing
+      a3: Grilles installation
+      a4: Cable management
+      a5: Power distribution
+      a6: Thermal optimization
+    }
+
+    install: Installation {
+      i1: Node placement (optimal)
+      i2: 3D printed enclosures
+      i3: Wiring & connectivity
+      i4: Calibration
+    }
+  }
+
+  production: Production {
+    p1: ✓ Hardware manufacturing
+    p2: ✓ Physical installation
+    p3: ✓ Real-world testing
+    p4: ✓ Optimization
+    p5: ✓ Full deployment
+  }
+
+  investment: Investment\nFUNDED {
+    shape: hexagon
+    style.fill: "#FFAB91"
+    cost: Hardware + Install\nGrant/Funding covered
+  }
+}
+
+# Parallel Track
+parallel: Parallel Activities {
+  shape: rectangle
+  style.fill: "#F3E5F5"
+  style.stroke: "#7B1FA2"
+  style.stroke-width: 2
+
+  dev: During Phase 1 {
+    infra: Infrastructure prep\n(Hetzner, OVH, 1Password)
+    models: BelgBERT training prep
+    partners: Partner identification
+    supply: Supply chain setup
+  }
+
+  scale: During Phase 2 {
+    nextcloud: Nextcloud production
+    tunnel: FFT sales tunnel
+    twin: Digital twin refinement
+    scale: Multi-site deployment
+  }
+}
+
+# Flows
+phase1 -> transition: Demo Success\nPitch Validated {
+  style.stroke: "#1976D2"
+  style.stroke-width: 3
+}
+
+transition -> phase2: GO Decision\nFunding Approved {
+  style.stroke: "#388E3C"
+  style.stroke-width: 3
+}
+
+phase1 -> parallel: Preparation {
+  style.stroke: "#7B1FA2"
+  style.stroke-width: 1
+  style.stroke-dash: 3
+}
+
+parallel -> phase2: Ready to Deploy {
+  style.stroke: "#7B1FA2"
+  style.stroke-width: 1
+  style.stroke-dash: 3
+}
+
+# Risk Mitigation
+risk: Risk Mitigation {
+  near: bottom-left
+  shape: text
+  style: {
+    font-size: 12
+    italic: true
+  }
+}
+
+risk: "Phase 1 validates concept before hardware investment\nLike Nextcloud Hetzner: Virtual → Production"
+
+# Value
+value: Key Value {
+  near: bottom-right
+  shape: text
+  style: {
+    font-size: 12
+    bold: true
+  }
+}
+
+value: "Zero waste if not selected • Rapid iteration • Proof before investment"

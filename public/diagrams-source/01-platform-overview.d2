@@ -1,0 +1,87 @@
+direction: right
+
+title: COSMIC Platform - Vue d'Ensemble {
+  near: top-center
+  shape: text
+  style: {
+    font-size: 24
+    bold: true
+  }
+}
+
+# Edge Layer
+edge: Edge Devices {
+  shape: cloud
+  style.fill: "#E3F2FD"
+
+  sensors: Environmental\nSensors {
+    shape: cylinder
+  }
+
+  controllers: Smart\nControllers {
+    shape: cylinder
+  }
+
+  sensors -> controllers: Local\nProcessing
+}
+
+# Cloud Platform
+platform: COSMIC Platform {
+  shape: hexagon
+  style.fill: "#C8E6C9"
+  style.stroke: "#2E7D32"
+  style.stroke-width: 3
+
+  intelligence: Intelligence\nLayer {
+    shape: circle
+    style.fill: "#FFF9C4"
+  }
+
+  storage: Scalable\nStorage {
+    shape: cylinder
+    style.fill: "#FFCCBC"
+  }
+
+  intelligence -> storage: Continuous\nLearning
+}
+
+# User Interface
+ui: User Experience {
+  shape: rectangle
+  style.fill: "#F3E5F5"
+
+  mobile: Mobile\nApp {
+    shape: rectangle
+  }
+
+  web: Web\nDashboard {
+    shape: rectangle
+  }
+
+  tour: 3D Virtual\nTour {
+    shape: rectangle
+  }
+}
+
+# Connections
+edge -> platform: Secure\nData Flow {
+  style.stroke: "#1976D2"
+  style.stroke-width: 2
+}
+
+platform -> ui: Real-time\nInsights {
+  style.stroke: "#388E3C"
+  style.stroke-width: 2
+}
+
+# Key Benefits
+benefits: {
+  near: bottom-center
+  shape: text
+  style: {
+    font-size: 14
+    italic: true
+  }
+}
+
+benefits: "✓ Flexible  ✓ European Infrastructure  ✓ Self-Improving  ✓ Multi-Domain"

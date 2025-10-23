@@ -1,0 +1,76 @@
+Élément,COSMIC (IoT Smart Building),FFT (Formation + Traduction),Synergie,Économie/Valeur (€),Notes
+PROJETS DISTINCTS,,,,,
+Objectif Principal,Smart environmental control + ventilation,Formation en ligne + tunnel de vente,Complémentaires,0,Deux projets mais infrastructure partagée
+Appel à Projet,Digital Europe (Smart Communities),Horizon Europe (Digital Skills),Différents programmes,0,Maximise chances financement
+Timeline,Phase 1 Oct-Nov 2025,Q1 2026+ (après BelgBERT),Séquentiel,0,COSMIC d'abord puis FFT
+,,,,,,
+INFRASTRUCTURE PARTAGÉE,,,,,
+MinIO Storage,Données IoT + time-series,Contenus formation + médias,Cluster unique partagé,5000,Économie infrastructure
+MinIO Capacity,50TB IoT data,200TB contenus multimédia,250TB total mutualisé,3000,Économie stockage scaling
+IPFS Network,Data IoT décentralisé,Distribution contenus formation,Nodes IPFS communs,2000,Résilience + CDN gratuit
+RAG System,Analyse données IoT + optimisation,Q&A formation + support clients,RAG engine partagé,8000,Développement unique réutilisé
+GitLab CI/CD,Déploiement COSMIC,Déploiement FFT platform,Pipelines communs,1500,Infrastructure DevOps mutualisée
+1Password,Credentials IoT devices,Credentials formation platform,Vault unique EU/COSMIC/FFT,500,Gestion secrets centralisée
+Monitoring,Grafana IoT metrics,Grafana platform metrics,Dashboard unifié,1000,Observabilité complète
+,,SOUS-TOTAL INFRA PARTAGÉE,,,,21000,Économie 30% vs infrastructures séparées
+,,,,,,
+BELGBERT INTEGRATION,,,,,
+Utilisation COSMIC,Interfaces utilisateur multilingues (FR/NL/EN),Traduction automatique contenus,Modèle NLP unique,50000,Évite Google Translate (coûts + data privacy)
+RAG COSMIC,Context-aware responses multilingues,Tutoriels adaptatifs multilingues,Embeddings BelgBERT,15000,Personnalisation par langue
+Interfaces Vocales,Commandes vocales COSMIC (futur),Voice-over formations,TTS/STT BelgBERT,20000,Accessibilité maximale
+Documentation,Docs techniques auto-traduites,Contenus cours auto-traduits,Pipeline traduction partagé,8000,Productivité x3
+Support Client,Chatbot COSMIC multilingue,Chatbot FFT support,Bot unique multi-projet,12000,Développement mutualisé
+,,SOUS-TOTAL BELGBERT,,,,105000,Investissement BelgBERT rentabilisé sur 2 projets
+,,,,,,
+DONNÉES & APPRENTISSAGE,,,,,
+Données Training,Logs IoT + feedback utilisateurs,Interactions apprenants + analytics,Dataset combiné plus riche,25000,Modèles plus performants
+Patterns Usage,Comportements thermiques,Comportements apprentissage,ML cross-domain insights,15000,Innovation méthodologique
+Optimisation,A/B testing COSMIC features,A/B testing contenus formation,Framework testing partagé,5000,Amélioration continue
+Analytics,Dashboards clients IoT,Dashboards clients formation,BI platform unique,8000,Économie Tableau/PowerBI
+,,SOUS-TOTAL DATA & ML,,,,53000,Intelligence partagée
+,,,,,,
+COMMERCIAL & MARKETING,,,,,
+Tunnel Vente FFT,N/A,Tunnel vente formations,Cross-sell COSMIC vers clients FFT,45000,"5% conversion clients FFT → COSMIC (estimation 15 installations sur 5 ans)"
+Branding Commun,COSMIC by FFT,FFT powered by BelgBERT,Marque ombrelle FFT,Qualitatif,Reconnaissance marque
+Contenu Marketing,Blog IoT + smart home,Blog formation + skills,Content marketing partagé,12000,Économie création contenu
+Events,Présence salons IoT,Présence salons EdTech,Stand commun quand pertinent,3000,Mutualisation frais
+SEO,Keywords IoT/smart home,Keywords formation/elearning,Domain authority partagé,5000,Référencement croisé
+,,SOUS-TOTAL COMMERCIAL,,,,65000,Revenus additionnels + économies
+,,,,,,
+ÉQUIPE & COMPÉTENCES,,,,,
+Développeurs,Backend IoT,Backend formation platform,Compétences transférables,20000,"Mobilité interne, pas de double recrutement"
+DevOps,Infrastructure COSMIC,Infrastructure FFT,Équipe unique,15000,1 équipe pour 2 projets
+Data Scientists,Analyse données IoT,Analyse learning analytics,Expertise partagée,18000,ML/AI skills réutilisés
+Support,Support clients COSMIC,Support apprenants FFT,Équipe support commune (niveau 1),10000,Économie headcount
+Formation Interne,Training équipe IoT,Training équipe EdTech,Cross-training bénéfique,5000,Polyvalence équipe
+,,SOUS-TOTAL ÉQUIPE,,,,68000,Optimisation RH
+,,,,,,
+LEGAL & COMPLIANCE,,,,,
+RGPD,Données IoT sensibles,Données apprenants sensibles,DPO commun + process unique,8000,Conformité mutualisée
+Certifications,CE IoT devices,SCORM/LTI formations,Audit qualité groupé,5000,Économie certification
+Assurances,RC professionnelle IoT,RC professionnelle formation,Police unique,2000,Prime réduite
+Contrats,Templates clients COSMIC,Templates clients FFT,Legal framework commun,3000,Avocat unique
+,,SOUS-TOTAL LEGAL,,,,18000,Sécurité juridique optimisée
+,,,,,,
+SYNERGIES TOTALES,,,,,330000,Valeur synergies sur 5 ans
+ÉCONOMIE vs SÉPARÉ,,,,,-30%,Réduction coûts vs 2 projets indépendants
+,,,,,,
+ALLOCATION GRANTS,,,,,
+Digital Europe,COSMIC (100%),0%,Smart Communities focus,100000,Principal financement COSMIC
+Horizon Europe,COSMIC scaling (30%),FFT + BelgBERT (70%),Multi-projets,150000,45k€ COSMIC + 105k€ FFT
+Co-financement,Équilibré,Équilibré,15% chaque projet,30000,15k€ COSMIC + 15k€ FFT
+,,TOTAL FINANCEMENT,,,,280000,Grants combinés
+,,,,,,
+JUSTIFICATION SYNERGIES,,,,,
+Efficacité,Mutualisation réduit coûts,Mutualisation réduit coûts,30% économie infrastructure,90000,Sur 5 ans vs projets séparés
+Innovation,IoT + AI,EdTech + NLP,Cross-pollination ideas,Qualitatif,Innovation accélérée
+Résilience,Diversification revenus,Diversification revenus,Risk mitigation,Qualitatif,2 sources revenus complémentaires
+Scalabilité,COSMIC scale avec FFT clients,FFT scale avec COSMIC clients,Network effects,Qualitatif,Base clients élargie
+Impact EU,Green Deal + Digital,Digital Skills + Inclusion,Multi-objectifs UE,Qualitatif,Contribution large programmes EU
+,,,,,,
+MESSAGES CLÉS PITCH,,,,,
+Deux Projets Distincts,Objectifs et financements différents,Mais synergies infrastructure,330k€ valeur créée,Non redondance avec maximisation efficacité
+BelgBERT Stratégique,Développé pour FFT traduction,Mais bénéficie COSMIC interfaces,105k€ économie COSMIC,Investment BelgBERT rentabilisé x2
+Infrastructure EU,RGPD + souveraineté données,Pour les 2 projets,100% EU-compliant,Différenciation compétitive majeure
+Équipe Optimisée,Compétences transférables,Mobilité interne projets,68k€ économie RH,Efficacité organisationnelle
+ROI Combiné,COSMIC: 24.8x grants,FFT: estimation 15-20x,ROI global excellent,Investissement public très rentable

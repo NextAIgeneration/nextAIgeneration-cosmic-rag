@@ -1,0 +1,103 @@
+direction: down
+
+title: User Journey - COSMIC Experience {
+  near: top-center
+  shape: text
+  style: {
+    font-size: 24
+    bold: true
+  }
+}
+
+# Step 1
+step1: 1. Installation {
+  shape: rectangle
+  style.fill: "#E3F2FD"
+
+  desc: Edge devices deployed\non-site
+}
+
+# Step 2
+step2: 2. Configuration {
+  shape: rectangle
+  style.fill: "#E1BEE7"
+
+  desc: Automated setup\nvia mobile app
+}
+
+# Step 3
+step3: 3. Monitoring {
+  shape: rectangle
+  style.fill: "#FFF9C4"
+
+  desc: Real-time data\ncollection starts
+}
+
+# Step 4
+step4: 4. Intelligence {
+  shape: rectangle
+  style.fill: "#C8E6C9"
+
+  desc: Platform learns\nand optimizes
+}
+
+# Step 5
+step5: 5. Insights {
+  shape: rectangle
+  style.fill: "#FFCCBC"
+
+  desc: Actionable recommendations\ndelivered
+}
+
+# Step 6
+step6: 6. Value {
+  shape: hexagon
+  style.fill: "#A5D6A7"
+  style.stroke: "#2E7D32"
+  style.stroke-width: 3
+
+  desc: Continuous improvement\nand ROI growth
+}
+
+# Flow
+step1 -> step2: Quick\nSetup {
+  style.stroke: "#1976D2"
+  style.stroke-width: 2
+}
+
+step2 -> step3: Plug &\nPlay {
+  style.stroke: "#7B1FA2"
+  style.stroke-width: 2
+}
+
+step3 -> step4: Automated {
+  style.stroke: "#F57C00"
+  style.stroke-width: 2
+}
+
+step4 -> step5: Smart {
+  style.stroke: "#388E3C"
+  style.stroke-width: 2
+}
+
+step5 -> step6: Measurable {
+  style.stroke: "#D32F2F"
+  style.stroke-width: 2
+}
+
+# Feedback loop
+step6 -> step4: Learning\nLoop {
+  style.stroke: "#00796B"
+  style.stroke-width: 2
+  style.stroke-dash: 3
+}
+
+timeline: Time to Value: Days (not months) {
+  near: bottom-center
+  shape: text
+  style: {
+    font-size: 16
+    bold: true
+    italic: true
+  }
+}

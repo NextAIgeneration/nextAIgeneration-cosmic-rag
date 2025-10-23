@@ -1,0 +1,129 @@
+direction: right
+
+title: COSMIC Timeline - Roadmap Q4 2025 & Beyond {
+  near: top-center
+  shape: text
+  style: {
+    font-size: 24
+    bold: true
+  }
+}
+
+# October
+oct: October 2025 {
+  shape: rectangle
+  style.fill: "#FFEBEE"
+  style.stroke: "#C62828"
+  style.stroke-width: 3
+
+  oct27: Oct 27 {
+    shape: rectangle
+    style.fill: "#FFCDD2"
+    label: Foundation\nDeadline
+  }
+
+  tasks: {
+    t1: ✓ Platform base
+    t2: ✓ Architecture
+    t3: ✓ Documentation
+  }
+}
+
+# November
+nov: November 2025 {
+  shape: rectangle
+  style.fill: "#E3F2FD"
+  style.stroke: "#1565C0"
+  style.stroke-width: 3
+
+  nov5: Nov 5 {
+    shape: hexagon
+    style.fill: "#90CAF9"
+    style.stroke: "#0D47A1"
+    style.stroke-width: 2
+    label: Digital Europe\nInfo Day
+  }
+
+  nov13: Nov 13-14 {
+    shape: hexagon
+    style.fill: "#64B5F6"
+    style.stroke: "#0D47A1"
+    style.stroke-width: 2
+    label: Horizon Europe\nWorkshop
+  }
+
+  deliverables: {
+    d1: • Pitch deck
+    d2: • 3D Demo
+    d3: • Live prototype
+  }
+}
+
+# Production
+prod: Production Launch {
+  shape: rectangle
+  style.fill: "#C8E6C9"
+  style.stroke: "#2E7D32"
+  style.stroke-width: 3
+
+  timeline: 4 Weeks {
+    shape: rectangle
+    style.fill: "#A5D6A7"
+
+    w1: Week 1\nDNS +\nNextcloud
+    w2: Week 2\nMail Server
+    w3: Week 3\nMigration
+    w4: Week 4\nValidation
+  }
+}
+
+# Q1 2026
+q1: Q1 2026 {
+  shape: rectangle
+  style.fill: "#FFF9C4"
+  style.stroke: "#F57F17"
+  style.stroke-width: 2
+
+  belgbert: BelgBERT {
+    shape: circle
+    style.fill: "#FFF59D"
+    label: Local Model\nTraining
+  }
+
+  hardware: Hardware\nDeployment
+
+  scale: Production\nScaling
+}
+
+# Flows
+oct -> nov: Foundation\nComplete {
+  style.stroke: "#D32F2F"
+  style.stroke-width: 2
+}
+
+nov -> prod: Events\nSuccess {
+  style.stroke: "#1976D2"
+  style.stroke-width: 2
+}
+
+prod -> q1: Infrastructure\nReady {
+  style.stroke: "#388E3C"
+  style.stroke-width: 2
+}
+
+# Parallel track
+oct -> prod: Parallel\nDeployment {
+  style.stroke: "#FF9800"
+  style.stroke-width: 2
+  style.stroke-dash: 3
+}
+
+milestones: Key Milestones: Foundation → Events → Production → Scale {
+  near: bottom-center
+  shape: text
+  style: {
+    font-size: 14
+    bold: true
+    italic: true
+  }
+}

@@ -1,0 +1,257 @@
+direction: down
+
+title: COSMIC Connectivity - LoRa Mesh + IPFS Resilient Architecture {
+  near: top-center
+  shape: text
+  style: {
+    font-size: 24
+    bold: true
+  }
+}
+
+# Local Mesh Network
+mesh: Local LoRa Mesh Network {
+  shape: rectangle
+  style.fill: "#E3F2FD"
+  style.stroke: "#1565C0"
+  style.stroke-width: 3
+
+  node1: Sensor Node 1 {
+    shape: circle
+    style.fill: "#90CAF9"
+    label: Internal\nSalon
+  }
+
+  node2: Sensor Node 2 {
+    shape: circle
+    style.fill: "#90CAF9"
+    label: Internal\nChambre
+  }
+
+  node3: Sensor Node 3 {
+    shape: circle
+    style.fill: "#90CAF9"
+    label: Internal\nCuisine
+  }
+
+  node_ext: External Node {
+    shape: circle
+    style.fill: "#FFF59D"
+    label: Outdoor\nWeather
+  }
+
+  control: Control Node {
+    shape: circle
+    style.fill: "#FFAB91"
+    label: Ventilation\nControl
+  }
+
+  node1 <-> node2: P2P\n868MHz {
+    style.stroke: "#1976D2"
+    style.stroke-width: 1
+    style.stroke-dash: 3
+  }
+
+  node2 <-> node3: P2P {
+    style.stroke: "#1976D2"
+    style.stroke-width: 1
+    style.stroke-dash: 3
+  }
+
+  node1 <-> control: P2P {
+    style.stroke: "#D32F2F"
+    style.stroke-width: 1
+    style.stroke-dash: 3
+  }
+
+  node_ext <-> node1: P2P {
+    style.stroke: "#F57C00"
+    style.stroke-width: 1
+    style.stroke-dash: 3
+  }
+}
+
+# Central Hub
+hub: Central Hub {
+  shape: hexagon
+  style.fill: "#C8E6C9"
+  style.stroke: "#2E7D32"
+  style.stroke-width: 3
+
+  gateway: Gateway Functions {
+    lora_mesh: LoRa Mesh Coordinator
+    lora_wan: LoRaWAN Gateway (TTN)
+    ipfs: IPFS Node (local)
+    edge: Edge Processing
+    wifi: WiFi Uplink
+  }
+
+  storage: Local Storage {
+    cache: IPFS Cache
+    db: Time-series DB
+    logs: Event logs
+  }
+}
+
+# IPFS Layer
+ipfs_local: Local IPFS Network {
+  shape: rectangle
+  style.fill: "#F3E5F5"
+  style.stroke: "#7B1FA2"
+  style.stroke-width: 2
+
+  concept: Decentralized Storage {
+    c1: Content-addressed
+    c2: P2P sync between hubs
+    c3: Offline-first
+    c4: Data integrity
+  }
+
+  benefit: Benefits {
+    b1: No single point failure
+    b2: Local caching
+    b3: Resilient sync
+    b4: EU data sovereignty
+  }
+}
+
+# WAN Connectivity
+wan: WAN Connectivity {
+  shape: rectangle
+  style.fill: "#FFF9C4"
+  style.stroke: "#F57F17"
+  style.stroke-width: 2
+
+  ttn: The Things Network {
+    shape: cloud
+    style.fill: "#FFF59D"
+    label: LoRaWAN\nFree EU Coverage
+  }
+
+  wifi_cloud: WiFi → Internet {
+    shape: cloud
+    style.fill: "#FFF59D"
+    label: Primary Uplink\n(when available)
+  }
+}
+
+# Cloud Platform
+cloud: Cloud Platform {
+  shape: cloud
+  style.fill: "#FFCCBC"
+  style.stroke: "#D84315"
+  style.stroke-width: 2
+
+  services: {
+    api: REST APIs
+    storage: Cloud IPFS gateway
+    analytics: Data analytics
+    dashboard: Web dashboard
+    ml: ML training (Phase 2+)
+  }
+}
+
+# Connections: Mesh to Hub
+mesh.node1 -> hub: LoRa\nMesh {
+  style.stroke: "#1976D2"
+  style.stroke-width: 2
+}
+
+mesh.node2 -> hub: LoRa\nMesh {
+  style.stroke: "#1976D2"
+  style.stroke-width: 2
+}
+
+mesh.node3 -> hub: LoRa\nMesh {
+  style.stroke: "#1976D2"
+  style.stroke-width: 2
+}
+
+mesh.node_ext -> hub: LoRa\nMesh {
+  style.stroke: "#F57C00"
+  style.stroke-width: 2
+}
+
+mesh.control -> hub: LoRa\nBidirectional {
+  style.stroke: "#D32F2F"
+  style.stroke-width: 2
+}
+
+# Hub to WAN
+hub -> wan.ttn: LoRaWAN\nUplink {
+  style.stroke: "#F57C00"
+  style.stroke-width: 2
+}
+
+hub -> wan.wifi_cloud: WiFi\nPrimary {
+  style.stroke: "#1976D2"
+  style.stroke-width: 3
+}
+
+# Hub to IPFS
+hub <-> ipfs_local: Local IPFS\nStorage & Sync {
+  style.stroke: "#7B1FA2"
+  style.stroke-width: 2
+}
+
+# WAN to Cloud
+wan.ttn -> cloud: Backup\nChannel {
+  style.stroke: "#F57C00"
+  style.stroke-width: 2
+  style.stroke-dash: 3
+}
+
+wan.wifi_cloud -> cloud: Primary\nChannel {
+  style.stroke: "#1976D2"
+  style.stroke-width: 3
+}
+
+# IPFS to Cloud
+ipfs_local -> cloud: IPFS\nCloud Gateway {
+  style.stroke: "#7B1FA2"
+  style.stroke-width: 2
+}
+
+# Resilience Scenarios
+scenario1: Scenario 1: Normal Operation {
+  shape: rectangle
+  style.fill: "#C8E6C9"
+  near: bottom-left
+
+  flow: WiFi → Cloud\n(Primary, fast)
+  backup: LoRa mesh active\n(local coordination)
+  ipfs: IPFS caching\n(local resilience)
+}
+
+scenario2: Scenario 2: Internet Down {
+  shape: rectangle
+  style.fill: "#FFF59D"
+  near: bottom-center
+
+  flow: LoRa mesh operational\n(inter-device comms)
+  backup: LoRaWAN → TTN → Cloud\n(slower, works!)
+  ipfs: IPFS local storage\n(zero data loss)
+}
+
+scenario3: Scenario 3: Total Offline {
+  shape: rectangle
+  style.fill: "#FFCCBC"
+  near: bottom-right
+
+  flow: LoRa mesh only\n(local coordination)
+  control: Ventilation still works\n(edge intelligence)
+  ipfs: Data queued locally\n(sync when back online)
+}
+
+# Key message
+message: {
+  near: top-right
+  shape: text
+  style: {
+    font-size: 14
+    bold: true
+    italic: true
+  }
+}
+
+message: "Triple Redundancy:\n✓ WiFi (fast)\n✓ LoRaWAN/TTN (backup WAN)\n✓ LoRa Mesh (always-on local)\n✓ IPFS (resilient storage)"

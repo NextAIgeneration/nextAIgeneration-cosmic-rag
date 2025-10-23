@@ -1,0 +1,237 @@
+direction: down
+
+title: COSMIC Thermal Differential Control Logic {
+  near: top-center
+  shape: text
+  style: {
+    font-size: 24
+    bold: true
+  }
+}
+
+# Input Data
+inputs: Data Inputs {
+  shape: rectangle
+  style.fill: "#E3F2FD"
+  style.stroke: "#1565C0"
+  style.stroke-width: 2
+
+  temp_int: Temp Internal\n(averaged per room)
+  temp_ext: Temp External\n(outdoor sensor)
+  co2: CO2 Levels\n(all rooms)
+  lux: Luminosity\n(day/night)
+  humidity: Humidity Int/Ext
+  time: Time Schedule
+}
+
+# Calculation
+calc: Calculate ΔT {
+  shape: hexagon
+  style.fill: "#FFF9C4"
+  style.stroke: "#F57F17"
+  style.stroke-width: 2
+
+  formula: ΔT = Temp_int - Temp_ext
+}
+
+# Decision Engine
+decision: Decision Engine {
+  shape: rectangle
+  style.fill: "#C8E6C9"
+  style.stroke: "#2E7D32"
+  style.stroke-width: 3
+
+  priority: Priority Rules {
+    p1: 1. CO2 > 1200 ppm\n→ HEALTH (force vent)
+    p2: 2. ΔT Analysis\n→ EFFICIENCY
+    p3: 3. Humidity extremes\n→ COMFORT
+    p4: 4. Day/Night mode\n→ DISCRETION
+    p5: 5. Energy cost\n→ ECONOMY
+  }
+}
+
+# Scenarios
+scenario_summer: Summer Scenario {
+  shape: rectangle
+  style.fill: "#FFCCBC"
+  style.stroke: "#D84315"
+  style.stroke-width: 2
+
+  condition: If ΔT > +5°C\n& Temp_ext < Temp_int {
+    shape: rectangle
+    style.fill: "#FFAB91"
+  }
+
+  action: FREE COOLING\nVentilation HIGH {
+    shape: hexagon
+    style.fill: "#FF8A65"
+    style.stroke: "#BF360C"
+    style.stroke-width: 2
+  }
+
+  benefit: Natural cooling\nNo AC needed
+}
+
+scenario_winter: Winter Scenario {
+  shape: rectangle
+  style.fill: "#BBDEFB"
+  style.stroke: "#1565C0"
+  style.stroke-width: 2
+
+  condition: If ΔT < -5°C\n& Temp_ext very cold {
+    shape: rectangle
+    style.fill: "#90CAF9"
+  }
+
+  action: HEAT CONSERVATION\nVentilation MINIMAL {
+    shape: hexagon
+    style.fill: "#64B5F6"
+    style.stroke: "#0D47A1"
+    style.stroke-width: 2
+  }
+
+  exception: CO2 > threshold\n→ Short BURST vent
+}
+
+scenario_midseason: Mid-Season Scenario {
+  shape: rectangle
+  style.fill: "#C8E6C9"
+  style.stroke: "#388E3C"
+  style.stroke-width: 2
+
+  condition: If ΔT ≈ 0°C (±2°C)\n& Comfortable range {
+    shape: rectangle
+    style.fill: "#A5D6A7"
+  }
+
+  action: NATURAL CIRCULATION\nVentilation MEDIUM {
+    shape: hexagon
+    style.fill: "#81C784"
+    style.stroke: "#2E7D32"
+    style.stroke-width: 2
+  }
+
+  benefit: Optimal comfort\nMinimal energy
+}
+
+scenario_night: Night Mode {
+  shape: rectangle
+  style.fill: "#D1C4E9"
+  style.stroke: "#512DA8"
+  style.stroke-width: 2
+
+  condition: If Luminosity LOW\n& Night hours {
+    shape: rectangle
+    style.fill: "#B39DDB"
+  }
+
+  action: QUIET MODE\nVentilation LOW/MEDIUM {
+    shape: hexagon
+    style.fill: "#9575CD"
+    style.stroke: "#311B92"
+    style.stroke-width: 2
+  }
+
+  override: CO2 critical\n→ Increase (but gentle)
+}
+
+# Outputs
+outputs: Control Outputs {
+  shape: rectangle
+  style.fill: "#FFCCBC"
+  style.stroke: "#D84315"
+  style.stroke-width: 2
+
+  vent_speed: Ventilation Speed\n(0-5 levels)
+  vent_mode: Mode Selection\n(OFF/LOW/MED/HIGH/BOOST)
+  schedule: Schedule Override
+  alert: User Alerts\n(if needed)
+}
+
+# Flows
+inputs -> calc: Temp Data {
+  style.stroke: "#1976D2"
+  style.stroke-width: 2
+}
+
+calc -> decision: ΔT Value {
+  style.stroke: "#F57C00"
+  style.stroke-width: 2
+}
+
+inputs -> decision: All Sensors {
+  style.stroke: "#1976D2"
+  style.stroke-width: 1
+}
+
+decision -> scenario_summer: Summer Path {
+  style.stroke: "#D32F2F"
+  style.stroke-width: 2
+}
+
+decision -> scenario_winter: Winter Path {
+  style.stroke: "#1565C0"
+  style.stroke-width: 2
+}
+
+decision -> scenario_midseason: Mid-Season Path {
+  style.stroke: "#388E3C"
+  style.stroke-width: 2
+}
+
+decision -> scenario_night: Night Path {
+  style.stroke: "#512DA8"
+  style.stroke-width: 2
+}
+
+scenario_summer -> outputs: Commands {
+  style.stroke: "#D32F2F"
+  style.stroke-width: 1
+}
+
+scenario_winter -> outputs: Commands {
+  style.stroke: "#1565C0"
+  style.stroke-width: 1
+}
+
+scenario_midseason -> outputs: Commands {
+  style.stroke: "#388E3C"
+  style.stroke-width: 1
+}
+
+scenario_night -> outputs: Commands {
+  style.stroke: "#512DA8"
+  style.stroke-width: 1
+}
+
+# Learning Loop
+ml: Machine Learning\n(Phase 2+) {
+  shape: cloud
+  style.fill: "#E1BEE7"
+  style.stroke: "#7B1FA2"
+  style.stroke-width: 2
+}
+
+outputs -> ml: Historical Data {
+  style.stroke: "#7B1FA2"
+  style.stroke-width: 1
+  style.stroke-dash: 3
+}
+
+ml -> decision: Optimized Rules {
+  style.stroke: "#7B1FA2"
+  style.stroke-width: 1
+  style.stroke-dash: 3
+}
+
+note: {
+  near: bottom-center
+  shape: text
+  style: {
+    font-size: 14
+    italic: true
+    bold: true
+  }
+}
+
+note: "Smart Thermal Management: 30-50% Energy Savings • Automated Comfort Optimization"

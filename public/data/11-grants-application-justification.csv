@@ -1,0 +1,105 @@
+Programme,Critère Évaluation,Métrique COSMIC,Valeur,Score/10,Justification Détaillée
+DIGITAL EUROPE - SMART COMMUNITIES,,,,,
+Excellence,Innovation technologique,Digital Twin First + LoRa mesh + IPFS,Approche unique,9/10,"Combinaison inédite: validation virtuelle avant production, triple redundancy connectivité, stockage décentralisé EU-sovereign"
+Excellence,Maturité technologique (TRL),TRL 6-7 (Phase 1) → TRL 8-9 (Phase 2),Prêt pilote,8/10,Digital Twin démontre faisabilité immédiate
+Excellence,Standards ouverts,LoRa 868MHz + IPFS + MQTT,100% open,9/10,Zéro vendor lock-in + contribution écosystème
+Impact,Réduction CO2,561 tCO2 sur 5 ans (105 installations),2.0 kg/€ investi,9/10,Contribution mesurable Green Deal -55% 2030
+Impact,Économies énergie clients,1012.5 MWh économisés sur 5 ans,30-50% réduction,10/10,ROI client 18-30 mois démontré
+Impact,Création emplois,36 ETP sur 5 ans,12.9 ETP/100k€,8/10,Impact social positif + compétences tech
+Impact,Scalabilité EU,Modèle réplicable 27 pays,Potentiel millions unités,9/10,Blueprint pour déploiement massif
+Implémentation,Phase 1 réalisable,Digital Twin Oct-Nov 2025,0€ risque,10/10,Validation rapide sans investissement lourd
+Implémentation,Timeline Phase 2,Déploiement 10 installations An 1,Réaliste,8/10,Approche progressive maîtrisée
+Implémentation,Gestion risques,Digital Twin mitigation + économies échelle,Risques adressés,9/10,Méthodologie robuste
+Implémentation,Équipe compétente,4 ETP confirmés + sous-traitants identifiés,Expertise démontrée,8/10,Track record + références
+,SCORE MOYEN DIGITAL EUROPE,,,8.8/10,Excellent alignement programme
+,MONTANT DEMANDÉ,,,100000,€ "Grant moyen attendu, cohérent avec impact"
+,ROI POUR FINANCEUR,Pour 1€ grant: 24.8€ valeur créée sur 5 ans,,24.8x,Retour exceptionnel investissement public
+,,,,,,
+HORIZON EUROPE - CLUSTER 5 (CLIMATE),,,,,
+Excellence,Nouveauté scientifique,Thermal differential control + RAG optimization,Publications prévues,8/10,Contribution scientifique mesurable
+Excellence,Interdisciplinarité,IoT + ML + Building physics + UX,Multi-domaines,9/10,Approche holistique innovante
+Excellence,Open Science,Protocoles LoRa + IPFS publiés + datasets,Open data,9/10,Transparence + reproductibilité
+Impact,Objectifs Green Deal,Réduction CO2 + efficacité énergétique,Aligné -55%,10/10,Contribution directe objectif UE 2030
+Impact,Transition énergétique,Free cooling + smart ventilation,Innovation rupture,9/10,Alternative low-tech aux systèmes énergivores
+Impact,Réplication potentiel,105 installations An 5 → 10000+ potentiel,Scaling massif,9/10,Millions bâtiments EU concernés
+Impact,Co-bénéfices,Santé (qualité air) + confort + emploi,Multi-impacts,8/10,Externalités positives nombreuses
+Implémentation,Consortium,Lead FR/BE + partenaires recherche,Multi-pays,7/10,À renforcer avec partenaires académiques
+Implémentation,WP structurés,Phase 1 (6 mois) → Phase 2 (18 mois) → Scaling,Claire roadmap,9/10,Méthodologie éprouvée
+Implémentation,Dissémination,Publications + conférences + open-source,Plan communication,8/10,Maximisation impact résultats
+Implémentation,Exploitation,SaaS model + licencing open-source,Viable long-terme,8/10,Sustainability post-projet
+,SCORE MOYEN HORIZON EUROPE,,,8.5/10,Très bon alignement Cluster 5
+,MONTANT DEMANDÉ,,,150000,€ "Grant R&D + scaling, incluant BelgBERT synergie (45k€ COSMIC + 105k€ FFT)"
+,ROI POUR FINANCEUR,Valeur scientifique + environnementale,,>30x,Innovation + impact climat
+,,,,,,
+JUSTIFICATION BUDGÉTAIRE,,,,,
+Digital Europe 100k€,Décomposition,,,
+,Hardware 10 installations,32000,€,Déploiement pilote
+,Gros œuvre + installation,25000,€,Infrastructure physique
+,Services cloud An 1-2,15000,€,Hetzner + monitoring + 1Password
+,Développement Phase 1→2,18000,€,Adaptation code virtual → production
+,Documentation + certification,10000,€,Manuels + conformité EU
+,,TOTAL DIGITAL EUROPE,100000,€,Budget cohérent programme
+,,,,,,
+Horizon Europe 150k€,Décomposition,,,
+,COSMIC scaling (20 installs),60000,€,Expansion parc installations
+,R&D thermal optimization,25000,€,Amélioration algorithmes + ML
+,BelgBERT training,50000,€,Modèle NLP multilingue (synergie FFT)
+,Publications + dissémination,8000,€,Conférences + articles scientifiques
+,Partenariats académiques,7000,€,Collaboration universités
+,,TOTAL HORIZON EUROPE,150000,€,Budget R&D + scaling
+,,,,,,
+Co-financement 30k€,Décomposition,,,
+,Équipe interne (temps),20000,€,4 ETP × temps partiel
+,Équipement existant,5000,€,Matterport + Insta360 + serveurs
+,Infrastructure actuelle,5000,€,Domaines + Cloudflare + Vercel
+,,TOTAL CO-FINANCEMENT,30000,€,15% apport propre démontré
+,,,,,,
+BUDGET TOTAL,COSMIC 5 ans,,280000,€ grants + co-financement
+,,,,,,
+COMPARAISON ALTERNATIVES,,,,,
+Faire rien,Status quo bâtiments inefficaces,,,0/10,Inacceptable face urgence climatique
+Retrofit classique,Isolation + pompe chaleur seule,~50000,€/install,4/10,"Coûteux, pas intelligent, pas scalable"
+Système propriétaire,Nest / Tado / Honeywell,~2000,€/install + lock-in,5/10,"Vendor lock-in US, data privacy concerns, pas résilient"
+COSMIC,Digital Twin + résilience + EU-sovereign,~3500,€/install,9/10,"Innovation, scalable, souverain, ouvert"
+,,,,,,
+AVANTAGES COMPÉTITIFS,,,,,
+vs Concurrents US,Souveraineté données EU + RGPD native,100% EU,Critical,Google/Amazon collectent data sans contrôle
+vs Concurrents EU,Triple redundancy + IPFS + LoRa mesh,Unique,Critical,Tado/Netatmo = single point failure internet
+vs Approches classiques,Digital Twin First = 0€ risque validation,Méthodologie,Critical,Approche traditionnelle = investissement avant validation
+vs Solutions fermées,Standards ouverts + open-source,Future-proof,Critical,Lock-in vendor = coûts cachés long-terme
+,,,,,,
+ALIGNEMENT POLITIQUES UE,,,,,
+Green Deal,Réduction 55% CO2 d'ici 2030,Direct contribution,Priorité 1,Bâtiments = 40% consommation énergie UE
+Digital Europe,Souveraineté numérique + infrastructure EU,100% aligné,Priorité 1,Alternative aux géants tech US/Asie
+Renovation Wave,1 million bâtiments rénovés/an objectif UE,Contribution measurable,Priorité 2,COSMIC = outil accélération renovation
+Skills Agenda,Formation + emploi numérique,36 ETP créés,Priorité 2,Compétences IoT + AI demandées
+Data Strategy,RGPD + data spaces EU,IPFS EU-sovereign,Priorité 1,Construction data space building sector
+,,,,,,
+RISQUES & MITIGATION,,,,,
+Adoption lente,Résistance changement utilisateurs,5% prob,LOW,Digital Twin démontre valeur avant déploiement
+Coûts supérieurs,Composants + installation,20% marge,LOW,Économies échelle contractualisées fournisseurs
+Échec technique,Hardware ou software,3% prob,VERY LOW,Phase 1 valide faisabilité technique complète
+Concurrence,Nouveaux entrants,Moyen,MEDIUM,Barrière entrée: expertise + open-source community
+Réglementation,Nouvelles normes EU,Faible,LOW,Standards ouverts = adaptabilité maximale
+,,,,,,
+SUCCESS FACTORS,,,,,
+Digital Twin First,Validation 0€ risk avant production,Critical,DONE,Méthodologie unique différenciante
+Équipe expérience,IoT + ML + building + UX,Critical,STRONG,Compétences réunies + track record
+Synergies FFT,Infrastructure partagée,Important,STRONG,330k€ économies synergie démontrées
+Open Standards,Community support + évolutivité,Important,STRONG,IPFS + LoRa ecosystems actifs
+EU Sovereignty,Data + infrastructure EU-first,Critical,STRONG,Différenciation majeure vs US competitors
+,,,,,,
+MÉTRIQUES SUIVI,,,,,
+KPI Technique,Uptime système,Target >99.5%,,SLA clients
+KPI Environnemental,CO2 évité cumulé,Target 561 tCO2/5ans,,Reporting Green Deal
+KPI Économique,Installations actives,Target 105 unités/5ans,,Growth trajectory
+KPI Social,Emplois créés,Target 36 ETP/5ans,,Impact emploi local
+KPI Innovation,Publications scientifiques,Target 7 articles/5ans,,Rayonnement académique
+KPI Satisfaction,NPS clients,Target >50,,Qualité service
+,,,,,,
+MESSAGES FINAUX,,,,,
+Pour Évaluateurs,COSMIC = Innovation + Impact + Viabilité,Triple excellence,,Rare combinaison gagnante
+Pour Commission EU,ROI exceptionnel 24.8x sur fonds publics,Efficacité budgétaire,,Investissement très rentable société
+Pour Citoyens EU,Confort + économies + climat + emplois,Bénéfices tangibles,,Amélioration qualité vie mesurable
+Pour Chercheurs,Open science + datasets + publications,Contribution scientifique,,Avancement connaissances
+Pour Industrie,Standards ouverts + réplication,Scalabilité EU,,Potentiel millions d'unités

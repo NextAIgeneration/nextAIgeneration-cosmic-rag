@@ -1,0 +1,181 @@
+direction: down
+
+title: COSMIC Hardware Architecture - Complete System {
+  near: top-center
+  shape: text
+  style: {
+    font-size: 24
+    bold: true
+  }
+}
+
+# Hub Central
+hub: Central Hub {
+  shape: rectangle
+  style.fill: "#C8E6C9"
+  style.stroke: "#2E7D32"
+  style.stroke-width: 3
+
+  hardware: Orange Pi / RPi 4-5 {
+    shape: rectangle
+    style.fill: "#A5D6A7"
+  }
+
+  features: {
+    wifi: WiFi Gateway
+    lora: LoRa TTN (WAN)
+    ipfs: IPFS Node
+    process: Edge Processing
+    power: USB-C Power
+  }
+}
+
+# Sensor Nodes Internal
+sensors_int: Internal Sensor Nodes {
+  shape: rectangle
+  style.fill: "#E3F2FD"
+  style.stroke: "#1565C0"
+  style.stroke-width: 2
+
+  node1: Node 1 - Salon {
+    shape: rectangle
+    style.fill: "#90CAF9"
+
+    hw: RPi Zero 2 W
+    s1: CO2 Sensor
+    s2: Temperature
+    s3: Humidity
+    comm: LoRa Mesh
+  }
+
+  node2: Node 2 - Chambre {
+    shape: rectangle
+    style.fill: "#90CAF9"
+
+    hw: RPi Pico W
+    s1: Temperature
+    s2: Humidity
+    s3: Motion
+    comm: LoRa Mesh
+  }
+
+  node3: Node 3 - Cuisine {
+    shape: rectangle
+    style.fill: "#90CAF9"
+
+    hw: RPi Zero 2 W
+    s1: Air Quality
+    s2: Temperature
+    s3: CO2 Sensor
+    comm: LoRa Mesh
+  }
+}
+
+# Sensor Node External
+sensor_ext: External Sensor Node {
+  shape: rectangle
+  style.fill: "#FFF9C4"
+  style.stroke: "#F57F17"
+  style.stroke-width: 2
+
+  hardware: RPi Pico W / ESP32 {
+    shape: rectangle
+    style.fill: "#FFF59D"
+  }
+
+  sensors: {
+    temp: Temperature Ext
+    hum: Humidity Ext
+    pres: Pressure (BME280)
+  }
+
+  features: {
+    case: Weatherproof IP65
+    power: Battery + Solar
+    comm: LoRa Mesh
+  }
+}
+
+# Control Node
+control: Control Node - Ventilation {
+  shape: rectangle
+  style.fill: "#FFCCBC"
+  style.stroke: "#D84315"
+  style.stroke-width: 2
+
+  hardware: RPi Zero 2 W {
+    shape: rectangle
+    style.fill: "#FFAB91"
+  }
+
+  sensors: {
+    lux: Luminosity (BH1750)
+    temp: Temperature (optional)
+  }
+
+  actuators: {
+    relay: 4-Channel Relay Board
+    vent: Ventilation Control
+    mode: PWM Speed Control
+  }
+
+  logic: {
+    day: Day/Night Detection
+    thermal: Thermal Differential
+    co2: CO2 Response
+    auto: Automated Scheduling
+  }
+
+  comm: LoRa Bidirectional
+}
+
+# Communications
+sensors_int -> hub: Sensor Data\nLoRa Mesh {
+  style.stroke: "#1976D2"
+  style.stroke-width: 2
+}
+
+sensor_ext -> hub: External Temp\nLoRa Mesh {
+  style.stroke: "#F57C00"
+  style.stroke-width: 2
+}
+
+control -> hub: Status Reports\nLoRa {
+  style.stroke: "#D32F2F"
+  style.stroke-width: 2
+}
+
+hub -> control: Control Commands\nLoRa {
+  style.stroke: "#388E3C"
+  style.stroke-width: 2
+  style.stroke-dash: 3
+}
+
+# Cloud Connection
+cloud: Cloud Platform {
+  shape: cloud
+  style.fill: "#E1BEE7"
+
+  services: {
+    ttn: The Things Network
+    ipfs: IPFS Storage
+    api: REST APIs
+  }
+}
+
+hub -> cloud: WAN Sync\nLoRaWAN + WiFi {
+  style.stroke: "#7B1FA2"
+  style.stroke-width: 2
+}
+
+# Power
+power_note: {
+  near: bottom-center
+  shape: text
+  style: {
+    font-size: 14
+    italic: true
+  }
+}
+
+power_note: "All nodes: USB-C Power (5V) • LoRa Mesh 868MHz EU • Resilient Architecture"

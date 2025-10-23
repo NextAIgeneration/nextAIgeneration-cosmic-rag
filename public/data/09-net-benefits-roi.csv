@@ -1,0 +1,108 @@
+Catégorie,Métrique,Année 1,Année 2,Année 3,Année 5,Total 5 ans,Unité,Notes
+INVESTISSEMENT INITIAL,,,,,,,
+Grant Digital Europe,Financement obtenu,100000,0,0,0,100000,€,Hypothèse moyenne
+Grant Horizon Europe,Financement R&D,0,150000,0,0,150000,€,Année 2 pour scaling
+Investissement Propre,Co-financement requis,15000,10000,5000,0,30000,€,15% du total grants
+,TOTAL INVESTISSEMENT,115000,160000,5000,0,280000,€,
+
+DÉPLOIEMENT COSMIC,,,,,,,
+Installations Année,Nombre nouvelles installations,10,25,40,30,105,unités,Croissance progressive
+Coût Unitaire Installation,Hardware + install + services,3200,3000,2800,2600,2895,€,Économies échelle -10 à -20%
+Investissement Déploiement,Coût total installations année,32000,75000,112000,78000,297000,€,Financé par grants
+Installations Cumulées,Base installée totale,10,35,75,105,105,unités,Parc actif
+
+REVENUS GÉNÉRÉS,,,,,,,
+SaaS Subscription,Revenus récurrents (100€/mois),12000,42000,90000,126000,270000,€,100€/mois par installation active
+Services Installation,Marge installations (15%),4800,11250,16800,11700,44550,€,15% marge sur hardware
+Services Maintenance,Contrats maintenance annuels,2000,7000,15000,21000,45000,€,20€/mois par install
+Formation & Support,Revenus one-time,3000,8000,12000,9000,32000,€,Formation clients + techniciens
+Certifications Économies,Bonus performance énergie,0,3500,7500,10500,21500,€,Partage économies clients
+,TOTAL REVENUS,21800,71750,141300,178200,413050,€,
+
+ÉCONOMIES CLIENTS,,,,,,,
+Économies Énergie Totales,Chauffage + climatisation,45000,157500,337500,472500,1012500,€,450€/an par installation (moyenne 40% économie)
+Réduction Empreinte Carbone,Tonnes CO2 évitées,25,87,187,262,561,tCO2,2.5t CO2/installation/an
+Valeur Carbone,Prix carbone EU ETS,2500,8700,18700,26200,56100,€,100€/tCO2 (prix actuel)
+Confort & Santé,Qualité air améliorée,Qualitatif,Qualitatif,Qualitatif,Qualitatif,Qualitatif,-,Réduction maladies respiratoires
+Valeur Immobilière,Augmentation valeur propriétés,50000,175000,375000,525000,1125000,€,+5000€ valeur/propriété smart
+,TOTAL VALEUR CLIENTS,97500,341200,731200,1023700,2193600,€,Bénéfices mesurables
+
+EMPLOIS CRÉÉS,,,,,,,
+Développeurs,Full-time équivalents,2,3,4,5,14,ETP,Développement plateforme
+Techniciens Installation,Full-time équivalents,1,3,5,4,13,ETP,Déploiement terrain
+Support Client,Full-time équivalents,0.5,1,2,2,5.5,ETP,Helpdesk + maintenance
+Chef de Projet,Full-time équivalents,0.5,1,1,1,3.5,ETP,Coordination
+,TOTAL EMPLOIS,4,8,12,12,36,ETP,Création emploi local EU
+Masse Salariale,Coûts salaires annuels,180000,360000,540000,540000,1620000,€,45k€ salaire moyen/ETP
+Impact Social,Cotisations sociales,72000,144000,216000,216000,648000,€,40% charges sociales
+
+IMPACT ENVIRONNEMENTAL,,,,,,,
+Énergie Économisée,MWh évités,112.5,393.75,843.75,1181.25,2531.25,MWh,11.25 MWh/installation/an
+Réduction CO2,Tonnes équivalent,25,87,187,262,561,tCO2,Contribution objectifs UE 2030
+Contribution Green Deal,% Objectif EU,-55%,-55%,-55%,-55%,-55%,-,Aligné objectifs décarbonation
+Label Écologique,Certifications obtenues,0,1,2,3,6,certifs,EU Ecolabel + autres
+
+R&D & INNOVATION,,,,,,,
+BelgBERT Integration,Interfaces multilingues,0,50000,0,0,50000,€,Synergie projet FFT (traduction)
+RAG MinIO,Infrastructure mémorielle,25000,15000,10000,5000,55000,€,Partagé COSMIC + FFT
+IPFS Recherche,Décentralisation avancée,10000,15000,10000,5000,40000,€,Contribution open-source
+LoRa Mesh Optimization,Protocoles propriétaires,8000,12000,8000,0,28000,€,Brevets potentiels
+Publications,Articles scientifiques,0,2,3,2,7,publications,Rayonnement académique
+,TOTAL R&D,43000,94000,31000,12000,180000,€,Innovation continue
+
+CALCUL APPORTS NETS,,,,,,,
+Total Investissement,(Grants + propre),115000,160000,5000,0,280000,€,Ce que ça coûte
+Total Revenus Directs,SaaS + services + maintenance,21800,71750,141300,178200,413050,€,Ce que ça rapporte directement
+Revenus Nets Directs,Revenus - Investissement,-93200,-88250,136300,178200,133050,€,Cash-flow direct
+,,,,,,,,
+Valeur Créée Clients,Économies + valeur immo,97500,341200,731200,1023700,2193600,€,Bénéfices clients mesurables
+Valeur Environnementale,CO2 + énergie,114500,402450,862450,1207450,2586850,€,Contribution climat
+Valeur Emploi,Salaires + cotisations,252000,504000,756000,756000,2268000,€,Impact économique local
+Valeur Innovation,R&D + brevets + publications,43000,94000,31000,12000,180000,€,Contribution scientifique
+,,,,,,,,
+APPORT NET TOTAL,Somme valeur créée,507000,1341650,2380650,2999150,7228450,€,"Valeur totale générée (revenus + externalités positives)"
+APPORT NET après Invest,Valeur nette,392000,1181650,2375650,2999150,6948450,€,Apport net réel pour société
+,,,,,,,,
+RATIO BÉNÉFICE/COÛT,Multiplicateur investissement,3.4,7.4,47.5,∞,24.8,x,"Pour 1€ investi, 24.8€ de valeur créée sur 5 ans"
+
+COMPARAISON OBJECTIFS UE,,,,,,,
+Green Deal 2030,Contribution décarbonation,0.0005%,0.0017%,0.0037%,0.0052%,0.011%,%,Sur objectif -55% EU (estimation conservative)
+Emploi Numérique,Création emplois tech,4,8,12,12,36,ETP,Contribution objectif Digital Europe
+Souveraineté Numérique,Infrastructure EU-first,100%,100%,100%,100%,100%,%,RGPD native + data EU
+Innovation Ouverte,Contribution open-source,Oui,Oui,Oui,Oui,Oui,-,IPFS + protocoles ouverts
+
+RISQUES & ATTÉNUATION,,,,,,,
+Adoption Plus Lente,Scénario pessimiste -30%,274485,939155,1666455,2099405,4979500,€,Apport net reste très positif
+Coûts Plus Élevés,Scénario +20% coûts,392000,1181650,2339050,2962550,6875250,€,Marge confortable
+Échec Technique,Probabilité,5%,3%,2%,1%,2.75%,%,Risque faible (Phase 1 valide concept)
+Mitigation,Digital Twin First,100%,100%,100%,100%,100%,%,Validation avant investissement lourd
+
+SYNERGIES FFT,,,,,,,
+BelgBERT Usage,Interfaces COSMIC multilingues,Partiel,Complet,Complet,Complet,3.5,années,Partage infrastructure R&D
+MinIO RAG Shared,Stockage + mémoire partagée,Oui,Oui,Oui,Oui,Oui,-,Économie infrastructure
+Tunnel Vente FFT,Cross-selling COSMIC,0,5000,15000,25000,45000,€,Revenus additionnels
+Formation Partagée,Contenu multilingue BelgBERT,0,3000,5000,5000,13000,€,Économie création contenu
+,TOTAL SYNERGIES,0,8000,20000,30000,58000,€,Valeur ajoutée collaboration projets
+
+JUSTIFICATION GRANTS,,,,,,,
+Digital Europe Focus,Smart Communities + Green,Aligné,Aligné,Aligné,Aligné,Aligné,-,Objectifs programme 2021-2027
+Horizon Europe Focus,Innovation + Scaling + Climate,Aligné,Aligné,Aligné,Aligné,Aligné,-,Cluster 5 (Climate) + Cluster 4 (Digital)
+Impact Social,Emplois + confort + santé,Élevé,Élevé,Élevé,Élevé,Élevé,-,Bénéfices mesurables
+Impact Environnemental,CO2 + énergie,Mesurable,Mesurable,Mesurable,Mesurable,Mesurable,-,Contribution Green Deal
+Souveraineté EU,Infrastructure + data EU-first,100%,100%,100%,100%,100%,%,Différenciation stratégique
+Scalabilité,Potentiel réplication EU,Élevé,Élevé,Élevé,Élevé,Élevé,-,Modèle exportable
+Open Innovation,Standards ouverts + IPFS,Oui,Oui,Oui,Oui,Oui,-,Contribution écosystème
+
+MÉTRIQUES CLÉS PITCH,,,,,,,
+Break-Even Cash,Année break-even direct,N/A,N/A,Année 3,Rentable,Rentable,-,Rentabilité directe atteinte An 3
+ROI Financeurs,Retour investissement grants,4.4x,8.4x,475.1x,∞,24.8x,multiplicateur,"Pour 1€ grant, 24.8€ valeur créée"
+Emplois / 100k€ Grant,Efficacité création emploi,3.5,5,24,∞,12.9,ETP/100k€,Impact emploi élevé
+CO2 évité / €,Efficacité climatique,0.22,0.54,37.4,∞,2.0,kgCO2/€,"2kg CO2 évité par € investi"
+Installations / Grant €,Efficacité déploiement,0.087,0.219,15,∞,0.375,unités/k€,Scalabilité démontrée
+
+MESSAGES CLÉS,,,,,,,
+Apport Net 5 ans,Valeur totale créée société,,,,,6948450,€,25x l'investissement grants
+Création Emploi,Emplois directs créés,,,,,36,ETP,Impact social positif
+Impact Climat,CO2 évité,,,,,561,tCO2,Contribution mesurable Green Deal
+Bénéfice Clients,Économies + confort,,,,,2193600,€,Amélioration qualité vie
+Innovation EU,Souveraineté + open-source,,,,,100%,%,Leadership technologique européen

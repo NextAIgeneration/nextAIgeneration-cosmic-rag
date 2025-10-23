@@ -1,0 +1,70 @@
+Catégorie,Item,Type,Coût Initial (€),Coût Mensuel (€),Installation (€),Configuration (€),Total Première Année (€),Notes
+LoRa Mesh Local,Modules LoRa SX1278,Hardware,56.00,0.00,25.00,30.00,111.00,7 modules (1 hub + 3 int + 1 ext + 1 control + 1 spare)
+LoRa Mesh Local,Antennes 868MHz,Hardware,35.00,0.00,15.00,0.00,50.00,7 antennes externes
+LoRa Mesh Local,Configuration Mesh,Service,0.00,0.00,0.00,40.00,40.00,Setup réseau P2P + routing
+LoRa Mesh Local,Tests portée,Service,0.00,0.00,0.00,20.00,20.00,Validation couverture site
+LoRa Mesh Local,,Sous-total LoRa Mesh,91.00,0.00,40.00,90.00,221.00,Communication locale toujours active
+
+LoRaWAN TTN,Gateway TTN (optionnel),Hardware,0.00,0.00,0.00,0.00,0.00,Hub agit comme gateway
+LoRaWAN TTN,Abonnement TTN,Service,0.00,0.00,0.00,0.00,0.00,The Things Network - GRATUIT
+LoRaWAN TTN,Configuration Gateway,Service,0.00,0.00,0.00,15.00,15.00,Enregistrement TTN + setup
+LoRaWAN TTN,API Integration,Service,0.00,0.00,0.00,25.00,25.00,Webhooks → Cloud platform
+LoRaWAN TTN,,Sous-total LoRaWAN,0.00,0.00,0.00,40.00,40.00,Backup WAN gratuit EU
+
+WiFi Primary,Router WiFi,Hardware,0.00,0.00,0.00,0.00,0.00,Existant sur site client
+WiFi Primary,Configuration Réseau,Service,0.00,0.00,0.00,30.00,30.00,DHCP reservations + firewall
+WiFi Primary,Sécurité WiFi,Service,0.00,0.00,0.00,20.00,20.00,WPA3 + segmentation réseau
+WiFi Primary,Internet Client,Service,0.00,35.00,0.00,0.00,420.00,Connexion internet existante (estimation)
+WiFi Primary,,Sous-total WiFi,0.00,35.00,0.00,50.00,470.00,Uplink principal rapide
+
+IPFS Local,Configuration Node,Service,0.00,0.00,0.00,40.00,40.00,Setup IPFS sur hub
+IPFS Local,Storage Local,Hardware,12.00,0.00,0.00,5.00,17.00,Carte SD 64GB hub
+IPFS Local,Pinning Service (optionnel),Service Cloud,0.00,5.00,0.00,10.00,70.00,Pinata/Infura backup cloud
+IPFS Local,Gateway Configuration,Service,0.00,0.00,0.00,15.00,15.00,Public gateway access
+IPFS Local,,Sous-total IPFS,12.00,5.00,0.00,70.00,142.00,Storage décentralisé résilient
+
+Cloud Services,Cloudflare,Service Cloud,0.00,0.00,0.00,10.00,10.00,Plan gratuit (edge + CDN)
+Cloud Services,Vercel,Service Cloud,0.00,0.00,0.00,5.00,5.00,Plan gratuit (frontend)
+Cloud Services,Hetzner VM,Service Cloud,0.00,15.00,0.00,20.00,200.00,CX21 (2vCPU 4GB RAM)
+Cloud Services,OVH DNS,Service Cloud,0.00,0.00,0.00,10.00,10.00,Domaine déjà possédé
+Cloud Services,1Password Connect,Service Cloud,0.00,8.00,0.00,15.00,111.00,Secrets management
+Cloud Services,Backup Storage,Service Cloud,0.00,3.00,0.00,10.00,46.00,Object storage S3-compatible
+Cloud Services,,Sous-total Cloud Services,0.00,26.00,0.00,70.00,382.00,Infrastructure cloud EU
+
+Monitoring,Uptime Monitoring,Service,0.00,0.00,0.00,10.00,10.00,Uptime Robot / Pingdom
+Monitoring,Alertes SMS/Email,Service,0.00,2.00,0.00,5.00,29.00,Notifications incidents
+Monitoring,Dashboard Grafana,Service,0.00,0.00,0.00,20.00,20.00,Visualisation métriques
+Monitoring,Logs Centralisés,Service,0.00,5.00,0.00,15.00,75.00,Loki/Elasticsearch
+Monitoring,,Sous-total Monitoring,0.00,7.00,0.00,50.00,134.00,Observabilité système
+
+Sécurité,Firewall Config,Service,0.00,0.00,0.00,40.00,40.00,UFW + fail2ban
+Sécurité,SSH Hardening,Service,0.00,0.00,0.00,15.00,15.00,Key-based auth only
+Sécurité,Certificats SSL,Service,0.00,0.00,0.00,5.00,5.00,Let's Encrypt auto-renew
+Sécurité,Tailscale VPN (futur),Service,0.00,0.00,0.00,0.00,0.00,Plan gratuit 20 devices
+Sécurité,Updates Automatiques,Service,0.00,0.00,0.00,10.00,10.00,Unattended upgrades
+Sécurité,,Sous-total Sécurité,0.00,0.00,0.00,70.00,70.00,Hardening complet
+
+Support & Maintenance,Documentation Réseau,Service,0.00,0.00,0.00,30.00,30.00,Topology + credentials
+Support & Maintenance,Formation Client,Service,0.00,0.00,0.00,60.00,60.00,1h training connectivité
+Support & Maintenance,Support Technique,Service,0.00,0.00,0.00,40.00,40.00,1 mois post-installation
+Support & Maintenance,Maintenance Préventive,Service,0.00,10.00,0.00,0.00,120.00,Mises à jour + monitoring
+Support & Maintenance,,Sous-total Support,0.00,10.00,0.00,130.00,250.00,Accompagnement client
+
+,,TOTAL CONNECTIVITÉ,103.00,83.00,40.00,570.00,"1,724.00",Installation complète première année
+
+Coûts Récurrents,Année 2+,Services cloud + maintenance,,83.00,,,996.00,Par an après installation
+Coûts Récurrents,Économies Volume,10+ installations,,75.00,,,"~10% discount",Négociation fournisseurs cloud
+Coûts Récurrents,Économies Volume,50+ installations,,70.00,,,"~15% discount",Plan entreprise
+
+Scénarios Résilience,Normal Operation,WiFi primary + LoRa mesh backup,,,,,0.00,Coût standard inclus
+Scénarios Résilience,Internet Down,LoRaWAN TTN + IPFS local,,,,,0.00,Pas de surcoût (TTN gratuit)
+Scénarios Résilience,Total Offline,LoRa mesh only + local storage,,,,,0.00,Fonctionne autonome
+
+Comparaison Alternatives,Solution 4G/LTE,Backup cellulaire,40.00,15.00,20.00,10.00,265.00,Plus coûteux que LoRaWAN
+Comparaison Alternatives,Solution Satellite,Backup Starlink,599.00,100.00,50.00,20.00,"1,869.00",Overkill pour COSMIC
+Comparaison Alternatives,Solution WiFi Mesh,Mesh classique,150.00,0.00,50.00,30.00,230.00,Pas de WAN backup
+
+Avantages COSMIC,Triple Redundancy,LoRa + TTN + WiFi,,,,,221.00,Résilience maximale
+Avantages COSMIC,Coût WAN Backup,TTN gratuit vs 4G,,,,,"-180.00",Économie annuelle
+Avantages COSMIC,IPFS Décentralisé,vs Cloud storage classique,,,,,"-60.00",Économie + souveraineté
+Avantages COSMIC,Zero Vendor Lock-in,Standards ouverts,,,,,Inestimable,Flexibilité future

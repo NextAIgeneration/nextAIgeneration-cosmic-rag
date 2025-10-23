@@ -1,0 +1,123 @@
+direction: down
+
+title: COSMIC Architecture - Layered Approach {
+  near: top-center
+  shape: text
+  style: {
+    font-size: 24
+    bold: true
+  }
+}
+
+# Layer 1: Edge
+layer1: Edge Computing Layer {
+  shape: rectangle
+  style.fill: "#E3F2FD"
+  style.stroke: "#1976D2"
+  style.stroke-width: 2
+
+  devices: Local Devices {
+    cortex: Cortex-A Boards
+    sensors: Environmental Sensors
+    comms: Wireless Modules
+  }
+
+  processing: Edge Processing {
+    realtime: Real-time Response
+    local: Local Decision Making
+    offline: Offline Capability
+  }
+}
+
+# Layer 2: Network
+layer2: Secure Communication Layer {
+  shape: rectangle
+  style.fill: "#F3E5F5"
+  style.stroke: "#7B1FA2"
+  style.stroke-width: 2
+
+  cdn: Global Edge Network
+  encryption: End-to-End Encryption
+  sync: Bidirectional Sync
+}
+
+# Layer 3: Cloud
+layer3: Cloud Intelligence Layer {
+  shape: rectangle
+  style.fill: "#C8E6C9"
+  style.stroke: "#388E3C"
+  style.stroke-width: 2
+
+  compute: Scalable Computing {
+    eu: EU Data Centers
+    sovereign: Data Sovereignty
+    compliant: GDPR Compliant
+  }
+
+  ai: Intelligence Engine {
+    learning: Continuous Learning
+    adapt: Context Adaptation
+    improve: Auto-Improvement
+  }
+}
+
+# Layer 4: Application
+layer4: Application Layer {
+  shape: rectangle
+  style.fill: "#FFF9C4"
+  style.stroke: "#F57C00"
+  style.stroke-width: 2
+
+  interfaces: User Interfaces {
+    mobile: Mobile Apps
+    web: Web Dashboards
+    tour: 3D Virtual Tours
+    api: RESTful APIs
+  }
+
+  integration: Integration Hub {
+    flexible: Multi-Protocol Support
+    extensible: Plugin Architecture
+    open: Open Standards
+  }
+}
+
+# Connections
+layer1 -> layer2: Encrypted\nData Streams {
+  style.stroke: "#1976D2"
+  style.stroke-width: 2
+}
+
+layer2 -> layer3: Secure\nTransport {
+  style.stroke: "#7B1FA2"
+  style.stroke-width: 2
+}
+
+layer3 -> layer4: API\nGateway {
+  style.stroke: "#388E3C"
+  style.stroke-width: 2
+}
+
+# Feedback
+layer4 -> layer3: User\nFeedback {
+  style.stroke: "#F57C00"
+  style.stroke-width: 2
+  style.stroke-dash: 3
+}
+
+layer3 -> layer1: Optimized\nConfigs {
+  style.stroke: "#00796B"
+  style.stroke-width: 2
+  style.stroke-dash: 3
+}
+
+note: {
+  near: bottom-center
+  shape: text
+  style: {
+    font-size: 14
+    italic: true
+  }
+}
+
+note: "Modular • Scalable • Secure • European"
